@@ -1,0 +1,39 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Style the first li of its parent */
+ul li:first-child {
+   background: yellow;
+} 
+
+ ul li:last-child {
+   background: red;
+   
+   }
+
+ul li:nth-child(odd){
+    background: green;
+}
+ ul li:nth-child(even){
+    background-color: blue;
+   }
+   
+.container{
+    max-width: 1200px;
+    margin: 30px;
+}
+
+.item-grid{
+ display: grid;
+grid-template-rows: 100px 200px;
+ background-color:silver;
+}
+.item{
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    background-color: coral
+}
