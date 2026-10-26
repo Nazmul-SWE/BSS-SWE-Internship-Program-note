@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Display</title>
+
+    <style>
+        .box {
+            background-color: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Block Elements</h2>
+    <div class="box block">Box 1</div>
+    <div class="box block">Box 2</div>
+
+    <h2>Inline Elements</h2>
+    <span class="box inline">Box 3</span>
+    <span class="box inline">Box 4</span>
+
+    <h2>Inline-Block Elements</h2>
+    <div class="box inline-block">Box 5</div>
+    <div class="box inline-block">Box 6</div>
+
+    <h2>Hidden Elements</h2>
+    <div class="box hidden">I am removed from layout</div>
+    <div class="box invisible">I am invisible</div>
+
+    <p>Check the difference between the hidden boxes.</p>
+
+</body>
+</html>
