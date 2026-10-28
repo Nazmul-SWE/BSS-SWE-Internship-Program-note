@@ -1,0 +1,43 @@
+
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+label {
+    font-size: 22px;
+    display: inline-block;
+    width: 110px;
+}
+
+
+input[type="text"],
+input[type="number"] {
+    width: 220px;
+    height: 28px;
+}
+
+input[type="range"] {
+    width: 200px;
+}
+
+
+input[type="date"] {
+    font-size: 16px;
+}
+
+
+button {
+    font-size: 18px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
