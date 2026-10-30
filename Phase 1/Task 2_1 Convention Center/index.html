@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abacus Convention Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Abacus Convention Center</a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#faq">Contact</a>
+        <a href="#footer">Subscribe</a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <picture>
+      <source media="(max-width: 767.98px)" srcset="img/hero-m.jpg">
+      <img class="hero__bg" src="img/hero.jpg" alt="">
+    </picture>
+    <button class="hero__arrow hero__arrow--l" aria-label="Previous">
+      <svg viewBox="0 0 32 54" fill="none">
+        <path d="M29 2 4 27l25 25" stroke="currentColor" stroke-width="3" />
+      </svg>
+    </button>
+    <button class="hero__arrow hero__arrow--r" aria-label="Next">
+      <svg viewBox="0 0 32 54" fill="none">
+        <path d="M3 2l25 25L3 52" stroke="currentColor" stroke-width="3" />
+      </svg>
+    </button>
+    <div class="hero__content">
+      <h1>The perfect venue for your next event</h1>
+      <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+        velit</p>
+      <a href="#packages" class="btn-white">Book Now</a>
+    </div>
+    <div class="hero__dots"><i class="on"></i><i></i><i></i><i></i></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="toast" id="toast">
+      <svg class="toast__gift" viewBox="0 0 24 24" fill="none" stroke="#5EACFF" stroke-width="1.6"
+        stroke-linejoin="round">
+        <rect x="2.5" y="8" width="19" height="4" rx="0.5" />
+        <path d="M4 12v9h16v-9M12 8v13" />
+        <path d="M12 8c-1.5-4.5-6-4.5-6-2.2C6 7 8 8 12 8zm0 0c1.5-4.5 6-4.5 6-2.2C18 7 16 8 12 8z" />
+      </svg>
+      <span>20% off on next booking</span>
+      <button class="toast__x" id="toastX" aria-label="Close"><svg viewBox="0 0 12 12" stroke="#5a5a5a"
+          stroke-width="1.2">
+          <path d="M1.5 1.5l9 9M10.5 1.5l-9 9" />
+        </svg></button>
+    </div>
+    <div class="about__inner">
+      <img class="about__img" src="img/about.jpg" alt="Guests celebrating together" width="546" height="364">
+      <img class="about__img about__img--m" src="img/about-m.jpg" alt="Guests celebrating together" width="328"
+        height="214">
+      <div class="about__text">
+        <h2>Every moment is Precious</h2>
+        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+          velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        <a href="#" class="btn-blue">Explore our album
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8">
+            <path d="M3 10h14M11 4l6 6-6 6" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="packages" id="packages">
+    <h2 class="title">Our Package</h2>
+    <div class="plans">
+
+      <article class="plan">
+        <div class="plan__price">$300</div>
+        <h3>Business fair</h3>
+        <p class="plan__desc">For most businesses event like book fair. craft fair.</p>
+        <ul>
+          <li>limited space access</li>
+          <li>Secuirty facility</li>
+          <li>event support</li>
+          <li>Decoration design</li>
+          <li>Per day bill</li>
+        </ul>
+        <a href="#" class="plan__btn">Choose plan</a>
+      </article>
+
+      <article class="plan">
+        <div class="plan__price">$500</div>
+        <h3>wedding basic</h3>
+        <p class="plan__desc">For weddings with basic plan and limited item</p>
+        <ul>
+          <li>Full space access</li>
+          <li>Food arrangement</li>
+          <li>mangement support</li>
+          <li>Decoration design</li>
+          <li>Billed as shift</li>
+        </ul>
+        <a href="#" class="plan__btn">Choose plan</a>
+      </article>
+
+      <div class="plan-slot">
+        <article class="plan plan--hot">
+          <span class="hot">Hot</span>
+          <div class="plan__pattern" aria-hidden="true">
+            <svg width="292" height="480" viewBox="0 0 292 480" fill="none" stroke="#fff" stroke-opacity=".2"
+              stroke-width="1">
+              <path d="M190 269 273 20M190 269 292 346" />
+              <path d="M199 266 278 20M199 266 292 336" />
+              <path d="M208 263 283 20M208 263 292 326" />
+              <path d="M217 260 288 20M217 260 292 316" />
+              <path d="M226 257 292 36M226 257 292 306" />
+              <path d="M235 254 292 62M235 254 292 296" />
+              <path d="M244 251 292 92M244 251 292 286" />
+              <path d="M253 248 292 124M253 248 292 276" />
+              <path d="M262 245 292 156M262 245 292 266" />
+            </svg>
+          </div>
+          <div class="plan__price">$800</div>
+          <h3>Wedding plus</h3>
+          <p class="plan__desc">For most weddings with premium plans</p>
+          <ul>
+            <li>Full space access</li>
+            <li>Dedicated team</li>
+            <li>Buffet food</li>
+            <li>premium Decoration</li>
+            <li>pay as plan</li>
+          </ul>
+          <a href="#" class="plan__btn">Choose plan</a>
+        </article>
+      </div>
+
+      <article class="plan">
+        <div class="plan__price">$1200</div>
+        <h3>Corporate event</h3>
+        <p class="plan__desc">For most corporate business events</p>
+        <ul>
+          <li>Full space access</li>
+          <li>Dedicated team</li>
+          <li>Buffet food</li>
+          <li>premium Decoration</li>
+          <li>pay as plan</li>
+        </ul>
+        <a href="#" class="plan__btn">Choose plan</a>
+      </article>
+
+    </div>
+  </section>
+
+
+</body>
+
+</html>
