@@ -7,49 +7,61 @@
     box-sizing: border-box;
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     margin: 0;
+    background-color: white;
     font-family: 'Poppins', sans-serif;
     color: #3e3e3e;
-    background-color: white;
 }
 
+/* Images */
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-h1, h2, h3, h4, p, ul {
+/* Remove default margins */
+h1, h2, h3, h4, p, ul, figure, blockquote {
     margin: 0;
     padding: 0;
 }
 
+/* Buttons */
 button {
     font-family: inherit;
     border: none;
     background: none;
     cursor: pointer;
+    padding: 0;
 }
 
 
 /* ==============================
-   1. NAVIGATION BAR
+   NAVIGATION BAR
 ============================== */
 
 .nav {
     height: 106px;
     background-color: white;
+    position: relative;
+    z-index: 20;
 }
 
 .nav__inner {
     max-width: 1128px;
     height: 100%;
     margin: 0 auto;
+    padding-top: 6px;
 
     display: flex;
     align-items: center;
@@ -59,53 +71,57 @@ button {
 .nav__logo {
     font-size: 22px;
     font-weight: 600;
+    line-height: 33px;
     color: #3e3e3e;
 }
 
 .nav__links {
     display: flex;
     gap: 26px;
+    margin-top: 2px;
 }
 
 .nav__links a {
     font-size: 16px;
     font-weight: 500;
+    line-height: 24px;
+    color: #3e3e3e;
 }
 
-/* Hide hamburger menu on desktop */
+/* Mobile menu button */
 .nav__burger {
     display: none;
 }
 
 
 /* ==============================
-   2. HERO SECTION
+   HERO SECTION
 ============================== */
 
 .hero {
-    height: 584px;
     position: relative;
+    height: 584px;
     overflow: hidden;
 
-    background-color: #1a1208;
-    color: white;
-
     border-radius: 0 0 8px 8px;
+
+    color: white;
+    background-color: #1a1208;
 }
 
-/* Hero background image */
+/* Background image */
 .hero__bg {
-    width: 100%;
-    height: 100%;
-
     position: absolute;
     top: 0;
     left: 0;
 
+    width: 100%;
+    height: 100%;
+
     object-fit: cover;
 }
 
-/* Left and right arrows */
+/* Slider arrows */
 .hero__arrow {
     position: absolute;
     top: 221px;
@@ -113,12 +129,13 @@ button {
     width: 32px;
     height: 54px;
 
-    color: white;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .hero__arrow svg {
     width: 100%;
     height: 100%;
+    display: block;
 }
 
 .hero__arrow--l {
@@ -129,50 +146,48 @@ button {
     right: 40px;
 }
 
-/* Hero heading and paragraph */
+/* Hero text */
 .hero__content {
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 60px;
-
-    width: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     text-align: center;
-
     padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 47px;
+    font-size: 47.5px;
     font-weight: 600;
     line-height: 58px;
-
     max-width: 680px;
 }
 
 .hero p {
-    font-size: 16px;
+    font-size: 15.8px;
+    font-weight: 400;
     line-height: 24px;
 
     max-width: 460px;
     margin-top: 4px;
 }
 
-/* Book Now button */
+/* Hero button */
 .btn-white {
+    margin-top: 17px;
+
     width: 168px;
     height: 44px;
 
-    margin-top: 17px;
-
-    background-color: white;
-    color: #3f87f5;
-
     border-radius: 4px;
+    background-color: white;
 
+    color: #3f87f5;
     font-size: 16px;
     font-weight: 600;
 
@@ -184,8 +199,8 @@ button {
 /* Slider dots */
 .hero__dots {
     position: absolute;
-    bottom: 13px;
     left: 50%;
+    bottom: 13px;
 
     transform: translateX(-50%);
 
@@ -197,9 +212,10 @@ button {
     width: 68px;
     height: 4px;
 
+    border-radius: 2px;
     background-color: rgba(255, 255, 255, 0.45);
 
-    border-radius: 2px;
+    cursor: pointer;
 }
 
 .hero__dots i.on {
@@ -208,15 +224,14 @@ button {
 
 
 /* ==============================
-   3. ABOUT SECTION
+   ABOUT SECTION
 ============================== */
 
 .about {
-    padding: 100px 0;
     position: relative;
+    padding: 100px 0;
 }
 
-/* About section container */
 .about__inner {
     max-width: 1128px;
     margin: 0 auto;
@@ -231,11 +246,12 @@ button {
     width: 546px;
     height: 364px;
 
-    object-fit: cover;
     border-radius: 8px;
+    object-fit: cover;
+
+    flex: none;
 }
 
-/* Hide mobile image on desktop */
 .about__img--m {
     display: none;
 }
@@ -243,13 +259,18 @@ button {
 /* About text */
 .about__text {
     flex: 1;
+    min-width: 0;
 }
 
 .about h2 {
     font-size: 38px;
     font-weight: 700;
     line-height: 48px;
+
     color: #0a0826;
+
+    position: relative;
+    top: 4px;
 }
 
 .about p {
@@ -260,14 +281,15 @@ button {
     color: #676767;
 
     margin-top: 16px;
+    max-width: 500px;
 }
 
-/* Explore button */
+/* About button */
 .btn-blue {
+    margin-top: 24px;
+
     width: 230px;
     height: 44px;
-
-    margin-top: 24px;
 
     background-color: #3f87f5;
     color: white;
@@ -281,9 +303,14 @@ button {
     gap: 12px;
 }
 
-/* Discount message */
+
+/* ==============================
+   DISCOUNT MESSAGE
+============================== */
+
 .toast {
     position: absolute;
+    z-index: 5;
 
     top: 241px;
     right: 19px;
@@ -292,7 +319,6 @@ button {
     height: 42px;
 
     background-color: white;
-
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
 
     display: flex;
@@ -301,11 +327,11 @@ button {
     padding-left: 12px;
     gap: 7px;
 
-    font-size: 14px;
+    font-size: 14.5px;
     color: #505050;
 }
 
-/* Blue line beside discount message */
+/* Blue line on the left */
 .toast::before {
     content: '';
 
@@ -322,6 +348,7 @@ button {
 .toast__gift {
     width: 22px;
     height: 22px;
+    flex: none;
 }
 
 .toast__x {
@@ -336,16 +363,16 @@ button {
 .toast__x svg {
     width: 12px;
     height: 12px;
+    display: block;
 }
 
 
 /* ==============================
-   4. PACKAGES SECTION
+   SECTION TITLES
 ============================== */
 
-/* Section heading */
 .title {
-    font-size: 38px;
+    font-size: 37.5px;
     font-weight: 600;
     line-height: 56px;
 
@@ -353,8 +380,15 @@ button {
     color: #0a0826;
 }
 
-/* All pricing cards */
+
+/* ==============================
+   PRICING PACKAGES
+============================== */
+
 .plans {
+    position: relative;
+    left: -13px;
+
     width: 1124px;
     margin: 101px auto 0;
 
@@ -367,21 +401,25 @@ button {
 
 /* Normal pricing card */
 .plan {
-    padding-left: 30px;
+    padding: 0 0 0 30px;
     margin-top: 91px;
 }
 
-/* Pricing card content width */
+/* Card content width */
 .plan > * {
     max-width: 207px;
+}
+
+.plan > .plan__desc {
+    max-width: 224px;
 }
 
 /* Price */
 .plan__price {
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
     font-weight: 700;
 
+    font-size: 36px;
     line-height: 42px;
 
     color: #231d4f;
@@ -390,9 +428,9 @@ button {
 /* Package name */
 .plan h3 {
     font-family: 'Roboto', sans-serif;
-    font-size: 28px;
     font-weight: 700;
 
+    font-size: 28px;
     line-height: 34px;
 
     color: #231d4f;
@@ -403,6 +441,7 @@ button {
 /* Package description */
 .plan__desc {
     font-size: 15px;
+    font-weight: 400;
     line-height: 23px;
 
     color: #848199;
@@ -410,39 +449,35 @@ button {
     margin-top: 14px;
 }
 
-.plan > .plan__desc {
-    max-width: 224px;
-}
-
-/* Package features */
+/* Feature list */
 .plan ul {
     list-style: none;
     margin-top: 10px;
 }
 
 .plan li {
+    position: relative;
+
     height: 31px;
     padding-left: 30px;
 
     display: flex;
     align-items: center;
 
-    position: relative;
-
     font-size: 15px;
     color: #848199;
 }
 
-/* Check icon before every feature */
+/* Check icon before each feature */
 .plan li::before {
     content: '';
 
-    width: 20px;
-    height: 20px;
-
     position: absolute;
     left: 0;
-    top: 5px;
+    top: 5.5px;
+
+    width: 20px;
+    height: 20px;
 
     border-radius: 50%;
 
@@ -451,47 +486,48 @@ button {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%235243c2' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 10.3l3 3 6-6.3'/%3E%3C/svg%3E");
 
     background-position: center;
-    background-repeat: no-repeat;
     background-size: 20px;
+    background-repeat: no-repeat;
 }
 
 /* Choose plan button */
 .plan__btn {
+    margin-top: 18px;
+
     width: 207px;
     height: 44px;
 
-    margin-top: 18px;
-
     border-radius: 22px;
-
     background-color: #fef5fb;
-    color: #3f87f5;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+    font-size: 15px;
+    color: #3f87f5;
 }
 
-/* Space around popular pricing card */
+/* Space for highlighted card */
 .plan-slot {
     width: 296px;
 }
 
 
 /* ==============================
-   POPULAR PACKAGE
+   POPULAR PRICING CARD
 ============================== */
 
 .plan--hot {
     position: relative;
 
+    margin-top: 0;
+
     width: 292px;
 
-    margin-top: 0;
     padding: 51px 30px 43px;
 
     border-radius: 24px;
@@ -502,13 +538,13 @@ button {
     box-shadow: 0 34px 50px -10px rgba(63, 135, 245, 0.35);
 }
 
-/* Popular card content */
+/* Content inside popular card */
 .plan--hot > * {
     max-width: 232px;
     position: relative;
 }
 
-/* Make all popular card text white */
+/* Change text color to white */
 .plan--hot .plan__price,
 .plan--hot h3,
 .plan--hot .plan__desc,
@@ -525,32 +561,31 @@ button {
 
 /* Popular card button */
 .plan--hot .plan__btn {
+    background-color: white;
+
     width: 232px;
     height: 45px;
 
     border-radius: 23px;
-
-    background-color: white;
 }
 
-/* Decorative background pattern */
+/* Background pattern */
 .plan--hot .plan__pattern {
     position: absolute;
-
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
 
-    width: 100%;
-    height: 100%;
+    max-width: none;
 
     overflow: hidden;
-
     border-radius: 24px;
 
     pointer-events: none;
 }
 
-/* Hot badge */
+/* Popular badge */
 .plan--hot .hot {
     position: absolute;
 
@@ -561,6 +596,8 @@ button {
 
     width: 46px;
     height: 28px;
+
+    max-width: none;
 
     border-radius: 14px;
 
@@ -577,68 +614,102 @@ button {
 
 
 /* ==============================
-   TABLET RESPONSIVE DESIGN
+   TESTIMONIAL SECTION
 ============================== */
 
-@media (max-width: 1240px) and (min-width: 768px) {
-
-    /* Navigation */
-    .nav__inner {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    /* About */
-    .about__inner {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .about__img {
-        width: 48%;
-        height: auto;
-        aspect-ratio: 3 / 2;
-    }
-
-    /* Packages */
-    .plans {
-        width: auto;
-        max-width: 640px;
-
-        margin-top: 60px;
-
-        grid-template-columns: 1fr 1fr;
-
-        row-gap: 40px;
-        padding: 0 20px;
-    }
-
-    .plan {
-        margin-top: 0;
-    }
-
-    .plan--hot {
-        margin-top: 0;
-    }
-
-    .plan-slot {
-        width: auto;
-
-        display: flex;
-        justify-content: center;
-    }
+.testi {
+    margin-top: 138px;
 }
+
+/* Testimonial cards container */
+.testi__grid {
+    width: 1160px;
+
+    margin: 100px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 360px);
+
+    gap: 40px;
+}
+
+/* Individual card */
+.card {
+    height: 323px;
+
+    padding-top: 20px;
+
+    background-color: white;
+
+    text-align: center;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Customer review */
+.card blockquote {
+    font-size: 16.4px;
+    font-weight: 400;
+    line-height: 26px;
+
+    color: #6c6c6c;
+}
+
+/* Customer image */
+.card img {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin: 15px auto 0;
+}
+
+.card figcaption {
+    display: block;
+}
+
+/* Customer name */
+.card b {
+    display: block;
+
+    margin-top: 16px;
+
+    font-size: 14.2px;
+    font-weight: 600;
+    line-height: 21px;
+
+    color: #0c1920;
+}
+
+/* Customer designation */
+.card span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 14.2px;
+    font-weight: 500;
+    line-height: 21px;
+
+    color: #747474;
+}
+
 
 
 /* ==============================
    MOBILE RESPONSIVE DESIGN
+   Screen: 767px or smaller
 ============================== */
 
 @media (max-width: 767.98px) {
 
-    /* ------------------
+    /* ==================
        MOBILE NAVIGATION
-    ------------------ */
+    ================== */
 
     .nav {
         height: 110px;
@@ -650,28 +721,33 @@ button {
 
     .nav__logo {
         font-size: 14px;
-        font-weight: 700;
         line-height: 21px;
 
         max-width: 150px;
+
+        font-weight: 700;
     }
 
-    /* Show hamburger menu */
+    /* Hamburger menu */
     .nav__burger {
         display: flex;
         flex-direction: column;
 
         gap: 6px;
+
         width: 28px;
 
+        padding: 0;
         margin-bottom: 10px;
     }
 
     .nav__burger span {
+        display: block;
+
         height: 2px;
+
         background-color: #222;
 
-        display: block;
         border-radius: 1px;
     }
 
@@ -680,7 +756,7 @@ button {
         align-self: flex-end;
     }
 
-    /* Mobile menu links */
+    /* Mobile navigation links */
     .nav__links {
         display: none;
 
@@ -693,6 +769,7 @@ button {
         background-color: white;
 
         flex-direction: column;
+
         gap: 0;
 
         padding: 8px 20px 16px;
@@ -700,7 +777,7 @@ button {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    /* Show links when menu is clicked */
+    /* Show menu when JavaScript adds show class */
     .nav__links.show {
         display: flex;
     }
@@ -710,9 +787,9 @@ button {
     }
 
 
-    /* ------------------
+    /* ==================
        MOBILE HERO
-    ------------------ */
+    ================== */
 
     .hero {
         height: 586px;
@@ -721,6 +798,7 @@ button {
     .hero__arrow {
         width: 27px;
         height: 46px;
+
         top: 222px;
     }
 
@@ -740,6 +818,7 @@ button {
     .hero h1 {
         font-size: 24px;
         line-height: 36px;
+
         max-width: 324px;
     }
 
@@ -763,9 +842,9 @@ button {
     }
 
 
-    /* ------------------
+    /* ==================
        MOBILE ABOUT
-    ------------------ */
+    ================== */
 
     .about {
         padding: 65px 0 50px;
@@ -776,6 +855,7 @@ button {
         align-items: stretch;
 
         gap: 0;
+
         padding: 0 16px;
     }
 
@@ -815,13 +895,17 @@ button {
         order: 2;
 
         margin-top: 15px;
+
         padding: 0 4px;
 
         font-size: 15px;
+
+        max-width: none;
     }
 
     .btn-blue {
         order: 4;
+
         margin: 20px auto 0;
     }
 
@@ -833,19 +917,34 @@ button {
     }
 
 
-    /* ------------------
-       MOBILE PACKAGES
-    ------------------ */
+    /* ==================
+       MOBILE TITLES
+    ================== */
 
     .title {
-        font-size: 19px;
+        font-size: 18.75px;
         line-height: 28px;
     }
 
+    .testi .title,
+    .faq .title {
+        font-size: 19.2px;
+        font-weight: 500;
+        color: #222;
+    }
+
+
+    /* ==================
+       MOBILE PRICING
+    ================== */
+
     .plans {
+        left: 0;
+
         width: auto;
 
         margin: 53px 0 0;
+
         padding: 0 16px;
 
         grid-template-columns: 1fr;
@@ -866,4 +965,134 @@ button {
         width: 100%;
     }
 
-}
+
+    /* ==================
+       MOBILE TESTIMONIALS
+    ================== */
+
+    .testi {
+        margin-top: 50px;
+    }
+
+    .testi__grid {
+        width: 294px;
+
+        max-width: calc(100% - 32px);
+
+        margin-top: 28px;
+
+        grid-template-columns: 1fr;
+
+        gap: 26px;
+    }
+
+    .card {
+        padding-top: 23px;
+    }
+
+    .card blockquote {
+        font-size: 16px;
+    }
+
+    .card img {
+        margin-top: 12px;
+    }
+
+    .card b {
+        margin-top: 18px;
+    }
+
+    .card span {
+        margin-top: 1px;
+    }
+
+
+    /* ==================
+       MOBILE FAQ
+    ================== */
+
+    .faq {
+        margin-top: 51px;
+        padding-bottom: 60px;
+    }
+
+    .faq__inner {
+        width: auto;
+
+        margin-top: 36px;
+
+        padding: 0 20px;
+
+        grid-template-columns: 1fr;
+
+        row-gap: 25px;
+    }
+
+    /* Hide desktop image */
+    .faq__img:not(.faq__img--m) {
+        display: none;
+    }
+
+    /* Show mobile image */
+    .faq__img--m {
+        display: block;
+
+        width: 324px;
+        max-width: 100%;
+
+        height: 301px;
+
+        margin: 0;
+
+        grid-column: 1;
+        grid-row: 1;
+
+        border-radius: 4px;
+    }
+
+    .faq__list {
+        grid-row: 2;
+        grid-column: 1;
+
+        margin: 0 11px 0 3px;
+    }
+
+    .q__head span {
+        max-width: 232px;
+    }
+
+    .q__head {
+        font-size: 16px;
+        line-height: 19px;
+
+        padding: 15px 16px;
+    }
+
+    .q:nth-child(2) .q__head {
+        line-height: 26px;
+        padding: 15px 16px;
+    }
+
+    .q,
+    .q.open {
+        margin-bottom: 16px;
+    }
+
+    .q:last-child {
+        margin-bottom: 0;
+    }
+
+    .q.open .q__head {
+        line-height: 28px;
+        padding: 15px 16px 0;
+    }
+
+    .q__body {
+        padding: 0 16px 7px;
+    }
+
+    .q__body p {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
