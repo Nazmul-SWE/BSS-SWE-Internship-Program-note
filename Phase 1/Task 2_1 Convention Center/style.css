@@ -699,6 +699,278 @@ button {
 }
 
 
+/* ==============================
+   FAQ SECTION
+============================== */
+
+.faq {
+    margin-top: 97px;
+    padding-bottom: 150px;
+}
+
+.faq__inner {
+    width: 1122px;
+
+    margin: 97px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 552px 546px;
+
+    column-gap: 24px;
+
+    align-items: start;
+}
+
+/* FAQ image */
+.faq__img {
+    width: 546px;
+    height: 364px;
+
+    border-radius: 4px;
+
+    object-fit: cover;
+
+    margin-top: 48px;
+}
+
+.faq__img--m {
+    display: none;
+}
+
+/* FAQ list position */
+.faq__list {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* FAQ desktop image position */
+.faq__inner > .faq__img:not(.faq__img--m) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* Each question box */
+.q {
+    border: 1px solid #d5e5fb;
+
+    border-radius: 4px;
+
+    background-color: white;
+
+    margin-bottom: 8px;
+}
+
+/* Question heading */
+.q__head {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: left;
+
+    padding: 23px 34px 23px 23px;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+
+    color: #383838;
+}
+
+.q__head svg {
+    width: 16px;
+    height: 16px;
+
+    flex: none;
+
+    margin-left: 8px;
+
+    overflow: visible;
+}
+
+/* Answer is hidden by default */
+.q__body {
+    display: none;
+
+    padding: 0 23px 6px;
+}
+
+.q__body p {
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+    line-height: 28px;
+
+    color: #7e848c;
+
+    margin-top: 8px;
+}
+
+/* Show answer when question is open */
+.q.open .q__head {
+    padding-top: 19px;
+    padding-bottom: 0;
+}
+
+.q.open .q__body {
+    display: block;
+}
+
+.q.open {
+    margin-bottom: 13px;
+}
+
+.q:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    height: 280px;
+
+    background-color: #0b0d17;
+    color: #d9dbe1;
+
+    font-family: 'Inter', sans-serif;
+}
+
+/* Footer content */
+.footer__inner {
+    height: 100%;
+
+    padding: 0 190px 0 165px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Copyright text */
+.footer__copy {
+    font-size: 13.2px;
+    line-height: 20px;
+}
+
+/* App download section */
+.footer__app {
+    align-self: flex-start;
+    padding-top: 59px;
+}
+
+.footer__app h4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+
+    margin-bottom: 19px;
+}
+
+.footer__app a {
+    display: block;
+}
+
+.footer__app a + a {
+    margin-top: 16px;
+}
+
+.footer__app img {
+    width: 135px;
+    height: 40px;
+}
+
+
+/* ==============================
+   TABLET RESPONSIVE DESIGN
+   Screen: 768px - 1240px
+============================== */
+
+@media (max-width: 1240px) and (min-width: 768px) {
+
+    /* Navigation and About */
+    .nav__inner,
+    .about__inner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .about__img {
+        width: 48%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    /* Pricing cards */
+    .plans {
+        left: 0;
+
+        width: auto;
+        max-width: 640px;
+
+        grid-template-columns: 1fr 1fr;
+
+        row-gap: 40px;
+
+        padding: 0 20px;
+    }
+
+    .plan,
+    .plan--hot {
+        margin-top: 0;
+    }
+
+    .plan-slot {
+        width: auto;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Testimonials */
+    .testi__grid {
+        width: auto;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+
+        padding: 0 20px;
+    }
+
+    .card blockquote {
+        font-size: 15px;
+    }
+
+    /* FAQ */
+    .faq__inner {
+        width: auto;
+
+        padding: 0 30px;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .faq__img {
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 3 / 2;
+    }
+
+    /* Footer */
+    .footer__inner {
+        padding: 0 40px;
+    }
+}
+
 
 /* ==============================
    MOBILE RESPONSIVE DESIGN
@@ -1096,3 +1368,27 @@ button {
         margin-top: 8px;
     }
 
+
+    /* ==================
+       MOBILE FOOTER
+    ================== */
+
+    .footer {
+        height: auto;
+    }
+
+    .footer__inner {
+        flex-direction: column-reverse;
+
+        align-items: flex-start;
+
+        gap: 28px;
+
+        padding: 44px 20px;
+    }
+
+    .footer__app {
+        padding-top: 0;
+    }
+
+}
