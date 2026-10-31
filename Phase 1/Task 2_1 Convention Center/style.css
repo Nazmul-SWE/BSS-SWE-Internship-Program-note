@@ -1,33 +1,23 @@
 
-/* ==============================
-   BASIC CSS
-============================== */
-
 * {
     box-sizing: border-box;
-}
-
-html {
-    -webkit-text-size-adjust: 100%;
 }
 
 body {
     margin: 0;
     background-color: white;
     font-family: 'Poppins', sans-serif;
-    color: #3e3e3e;
+    color: #F5F5F5;
 }
 
-/* Images */
+
 img {
     display: block;
     max-width: 100%;
 }
 
-/* Links */
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 /* Remove default margins */
@@ -36,7 +26,7 @@ h1, h2, h3, h4, p, ul, figure, blockquote {
     padding: 0;
 }
 
-/* Buttons */
+
 button {
     font-family: inherit;
     border: none;
@@ -46,9 +36,7 @@ button {
 }
 
 
-/* ==============================
-   NAVIGATION BAR
-============================== */
+/*  NAVIGATION BAR */
 
 .nav {
     height: 106px;
@@ -94,9 +82,7 @@ button {
 }
 
 
-/* ==============================
-   HERO SECTION
-============================== */
+/*  HERO SECTION */
 
 .hero {
     position: relative;
@@ -121,30 +107,8 @@ button {
     object-fit: cover;
 }
 
-/* Slider arrows */
-.hero__arrow {
-    position: absolute;
-    top: 221px;
 
-    width: 32px;
-    height: 54px;
 
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.hero__arrow svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.hero__arrow--l {
-    left: 40px;
-}
-
-.hero__arrow--r {
-    right: 40px;
-}
 
 /* Hero text */
 .hero__content {
@@ -162,70 +126,36 @@ button {
 }
 
 .hero h1 {
-    font-size: 47.5px;
+    font-size: 48px;
     font-weight: 600;
-    line-height: 58px;
-    max-width: 680px;
+    line-height: 116x;
+    max-width: 639px;
 }
 
 .hero p {
-    font-size: 15.8px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 300;
     line-height: 24px;
-
-    max-width: 460px;
+    max-width: 456px;
     margin-top: 4px;
 }
 
 /* Hero button */
 .btn-white {
     margin-top: 17px;
-
     width: 168px;
     height: 44px;
-
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: white;
-
     color: #3f87f5;
     font-size: 16px;
-    font-weight: 600;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Slider dots */
-.hero__dots {
-    position: absolute;
-    left: 50%;
-    bottom: 13px;
-
-    transform: translateX(-50%);
-
-    display: flex;
-    gap: 10px;
-}
-
-.hero__dots i {
-    width: 68px;
-    height: 4px;
-
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.45);
-
-    cursor: pointer;
-}
-
-.hero__dots i.on {
-    background-color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    padding: 10px 43.5px;
+   
 }
 
 
-/* ==============================
-   ABOUT SECTION
-============================== */
+/* ABOUT SECTION*/
 
 .about {
     position: relative;
@@ -235,20 +165,17 @@ button {
 .about__inner {
     max-width: 1128px;
     margin: 0 auto;
-
     display: flex;
     align-items: center;
     gap: 35px;
 }
 
-/* About image */
+
 .about__img {
     width: 546px;
     height: 364px;
-
-    border-radius: 8px;
+    border-radius: 5px;
     object-fit: cover;
-
     flex: none;
 }
 
@@ -265,68 +192,52 @@ button {
 .about h2 {
     font-size: 38px;
     font-weight: 700;
-    line-height: 48px;
-
+    line-height: 60px;
     color: #0a0826;
-
     position: relative;
     top: 4px;
 }
 
 .about p {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 28px;
-
-    color: #676767;
-
-    margin-top: 16px;
+    color: #6C6C6C;                                                               
+    margin-top: 6px;
     max-width: 500px;
 }
 
 /* About button */
 .btn-blue {
-    margin-top: 24px;
-
+    margin-top: 20px;
     width: 230px;
     height: 44px;
-
     background-color: #3f87f5;
     color: white;
-
     font-size: 16px;
-    font-weight: 600;
-
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 120px;
 }
 
 
-/* ==============================
-   DISCOUNT MESSAGE
-============================== */
+/*  DISCOUNT MESSAGE */
 
 .toast {
     position: absolute;
     z-index: 5;
-
     top: 241px;
     right: 19px;
-
     width: 255px;
     height: 42px;
-
     background-color: white;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
-
     display: flex;
     align-items: center;
-
     padding-left: 12px;
     gap: 7px;
-
     font-size: 14.5px;
     color: #505050;
 }
@@ -345,206 +256,180 @@ button {
     background-color: #3f87f5;
 }
 
-.toast__gift {
-    width: 22px;
-    height: 22px;
-    flex: none;
+/*OUR PACKAGE */
+
+
+/* PACKAGES SECTION */
+
+.packages {
+    padding: 80px 20px;
 }
-
-.toast__x {
-    position: absolute;
-    right: 7px;
-    top: 8px;
-
-    width: 12px;
-    height: 12px;
-}
-
-.toast__x svg {
-    width: 12px;
-    height: 12px;
-    display: block;
-}
-
-
-/* ==============================
-   SECTION TITLES
-============================== */
 
 .title {
-    font-size: 37.5px;
-    font-weight: 600;
-    line-height: 56px;
-
     text-align: center;
-    color: #0a0826;
+    font-size: 28px;
+    color: #231d4f;
+    font-weight: 700;
 }
 
 
-/* ==============================
-   PRICING PACKAGES
-============================== */
+/* All Package Cards */
 
 .plans {
-    position: relative;
-    left: -13px;
-
-    width: 1124px;
-    margin: 101px auto 0;
+    max-width: 1120px;
+    margin: 70px auto 0;
 
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
 
-    grid-template-columns: 266px 296px 296px 266px;
-
-    align-items: start;
+    align-items: center;
 }
 
-/* Normal pricing card */
+
+/* Single Card */
+
 .plan {
-    padding: 0 0 0 30px;
-    margin-top: 91px;
+    background-color: white;
+
+    padding: 30px 22px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
 }
 
-/* Card content width */
-.plan > * {
-    max-width: 207px;
+
+/* Card Hover */
+
+.plan:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
-.plan > .plan__desc {
-    max-width: 224px;
-}
 
 /* Price */
+
 .plan__price {
-    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
     font-weight: 700;
-
-    font-size: 36px;
-    line-height: 42px;
-
     color: #231d4f;
 }
 
-/* Package name */
+
+/* Package Name */
+
 .plan h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-
-    font-size: 28px;
-    line-height: 34px;
-
+    font-size: 22px;
     color: #231d4f;
-
-    margin-top: 22px;
+    margin-top: 15px;
 }
 
-/* Package description */
+
+/* Description */
+
 .plan__desc {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 23px;
-
+    font-size: 14px;
+    line-height: 22px;
     color: #848199;
+    margin-top: 12px;
 
-    margin-top: 14px;
+    overflow-wrap: break-word;
 }
 
-/* Feature list */
+
+/* Feature List */
+
 .plan ul {
     list-style: none;
-    margin-top: 10px;
+    margin-top: 18px;
 }
 
 .plan li {
-    position: relative;
-
-    height: 31px;
-    padding-left: 30px;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 15px;
+    font-size: 14px;
     color: #848199;
+
+    margin-bottom: 12px;
+    padding-left: 25px;
+
+    position: relative;
 }
 
-/* Check icon before each feature */
+
+/* Check Icon */
+
 .plan li::before {
-    content: '';
+    content: "✓";
 
     position: absolute;
     left: 0;
-    top: 5.5px;
 
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
+
+    background-color: #e8e7fa;
+    color: #5243c2;
 
     border-radius: 50%;
-
-    background-color: #ecebfb;
-
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%235243c2' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 10.3l3 3 6-6.3'/%3E%3C/svg%3E");
-
-    background-position: center;
-    background-size: 20px;
-    background-repeat: no-repeat;
-}
-
-/* Choose plan button */
-.plan__btn {
-    margin-top: 18px;
-
-    width: 207px;
-    height: 44px;
-
-    border-radius: 22px;
-    background-color: #fef5fb;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* Choose Plan Button */
+
+.plan__btn {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 25px;
+    padding: 12px 10px;
+
+    border-radius: 25px;
+
+    background-color: #fef5fb;
+    color: #3f87f5;
+
+    font-size: 14px;
     font-weight: 700;
 
-    font-size: 15px;
-    color: #3f87f5;
+    text-decoration: none;
+
+    transition: 0.3s;
 }
 
-/* Space for highlighted card */
-.plan-slot {
-    width: 296px;
+.plan__btn:hover {
+    background-color: #3f87f5;
+    color: white;
 }
 
 
-/* ==============================
-   POPULAR PRICING CARD
-============================== */
+/* Popular Card */
 
 .plan--hot {
     position: relative;
 
-    margin-top: 0;
-
-    width: 292px;
-
-    padding: 51px 30px 43px;
-
-    border-radius: 24px;
-
     background-color: #3f87f5;
+
+    padding-top: 45px;
+    padding-bottom: 35px;
+
     color: white;
 
-    box-shadow: 0 34px 50px -10px rgba(63, 135, 245, 0.35);
+    box-shadow: 0 20px 35px rgba(63, 135, 245, 0.3);
 }
 
-/* Content inside popular card */
-.plan--hot > * {
-    max-width: 232px;
-    position: relative;
-}
 
-/* Change text color to white */
+/* Popular Card Text */
+
 .plan--hot .plan__price,
 .plan--hot h3,
 .plan--hot .plan__desc,
@@ -552,65 +437,47 @@ button {
     color: white;
 }
 
-/* White check icons */
-.plan--hot li::before {
-    background-color: rgba(255, 255, 255, 0.22);
 
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23ffffff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5.5 10.3l3 3 6-6.3'/%3E%3C/svg%3E");
+/* Popular Card Check Icon */
+
+.plan--hot li::before {
+    background-color: white;
+    color: #3f87f5;
 }
 
-/* Popular card button */
+
+/* Popular Card Button */
+
 .plan--hot .plan__btn {
     background-color: white;
-
-    width: 232px;
-    height: 45px;
-
-    border-radius: 23px;
+    color: #3f87f5;
 }
 
-/* Background pattern */
-.plan--hot .plan__pattern {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    max-width: none;
-
-    overflow: hidden;
-    border-radius: 24px;
-
-    pointer-events: none;
+.plan--hot .plan__btn:hover {
+    background-color: #231d4f;
+    color: white;
 }
 
-/* Popular badge */
-.plan--hot .hot {
+
+/* Popular Badge */
+
+.hot {
     position: absolute;
-
-    top: -12px;
-    right: 20px;
-
-    z-index: 2;
-
-    width: 46px;
-    height: 28px;
-
-    max-width: none;
-
-    border-radius: 14px;
+    top: 12px;
+    right: 15px;
 
     background-color: #ff4e4e;
     color: white;
 
-    font-size: 13px;
-    font-weight: 600;
+    padding: 6px 12px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
 }
+
+
 
 
 /* ==============================
@@ -624,35 +491,27 @@ button {
 /* Testimonial cards container */
 .testi__grid {
     width: 1160px;
-
     margin: 100px auto 0;
-
     display: grid;
-
     grid-template-columns: repeat(3, 360px);
-
     gap: 40px;
 }
 
 /* Individual card */
 .card {
     height: 323px;
-
     padding-top: 20px;
-
     background-color: white;
-
     text-align: center;
-
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Customer review */
 .card blockquote {
-    font-size: 16.4px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-
     color: #6c6c6c;
 }
 
@@ -660,11 +519,8 @@ button {
 .card img {
     width: 100px;
     height: 100px;
-
     border-radius: 50%;
-
     object-fit: cover;
-
     margin: 15px auto 0;
 }
 
@@ -675,10 +531,8 @@ button {
 /* Customer name */
 .card b {
     display: block;
-
     margin-top: 16px;
-
-    font-size: 14.2px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 21px;
 
@@ -688,13 +542,10 @@ button {
 /* Customer designation */
 .card span {
     display: block;
-
     margin-top: 3px;
-
-    font-size: 14.2px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
     line-height: 21px;
-
     color: #747474;
 }
 
@@ -702,132 +553,83 @@ button {
 /* ==============================
    FAQ SECTION
 ============================== */
-
+/* FAQ SECTION */
 .faq {
-    margin-top: 97px;
-    padding-bottom: 150px;
+    margin-top: 100px;
+    padding-bottom: 100px;
 }
 
-.faq__inner {
-    width: 1122px;
-
-    margin: 97px auto 0;
-
-    display: grid;
-
-    grid-template-columns: 552px 546px;
-
-    column-gap: 24px;
-
-    align-items: start;
-}
-
-/* FAQ image */
-.faq__img {
-    width: 546px;
-    height: 364px;
-
-    border-radius: 4px;
-
-    object-fit: cover;
-
-    margin-top: 48px;
-}
-
-.faq__img--m {
-    display: none;
-}
-
-/* FAQ list position */
-.faq__list {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-/* FAQ desktop image position */
-.faq__inner > .faq__img:not(.faq__img--m) {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-/* Each question box */
-.q {
-    border: 1px solid #d5e5fb;
-
-    border-radius: 4px;
-
-    background-color: white;
-
-    margin-bottom: 8px;
-}
-
-/* Question heading */
-.q__head {
-    width: 100%;
+/* FAQ CONTAINER */
+.faq-container {
+    width: 90%;
+    max-width: 1122px;
+    margin: 80px auto;
 
     display: flex;
-    align-items: center;
+    gap: 25px;
+}
+
+/* FAQ LIST */
+.faq-list {
+    width: 50%;
+}
+
+/* EACH QUESTION */
+.question {
+    border: 1px solid #d5e5fb;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/* QUESTION TITLE */
+.question-title {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    text-align: left;
+    border: none;
+    background-color: white;
 
-    padding: 23px 34px 23px 23px;
-
-    font-family: 'Inter', sans-serif;
-
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 28px;
-
+    text-align: left;
     color: #383838;
 }
 
-.q__head svg {
-    width: 16px;
-    height: 16px;
-
-    flex: none;
-
-    margin-left: 8px;
-
-    overflow: visible;
-}
-
-/* Answer is hidden by default */
-.q__body {
+/* ANSWER */
+.answer {
     display: none;
-
-    padding: 0 23px 6px;
+    padding: 0 20px 15px;
 }
 
-.q__body p {
-    font-family: 'Inter', sans-serif;
-
-    font-size: 16px;
+.answer p {
+    font-size: 15px;
     line-height: 28px;
-
     color: #7e848c;
-
-    margin-top: 8px;
 }
 
-/* Show answer when question is open */
-.q.open .q__head {
-    padding-top: 19px;
-    padding-bottom: 0;
-}
-
-.q.open .q__body {
+/* SHOW FIRST ANSWER */
+.question.open .answer {
     display: block;
 }
 
-.q.open {
-    margin-bottom: 13px;
+/* FAQ IMAGE */
+.faq-image {
+    width: 50%;
 }
 
-.q:last-child {
-    margin-bottom: 0;
+.faq-image img {
+    width: 100%;
+    height: 364px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 40px;
 }
+
 
 
 /* ==============================
@@ -836,19 +638,15 @@ button {
 
 .footer {
     height: 280px;
-
     background-color: #0b0d17;
     color: #d9dbe1;
-
     font-family: 'Inter', sans-serif;
 }
 
 /* Footer content */
 .footer__inner {
     height: 100%;
-
     padding: 0 190px 0 165px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -856,7 +654,7 @@ button {
 
 /* Copyright text */
 .footer__copy {
-    font-size: 13.2px;
+    font-size: 16px;
     line-height: 20px;
 }
 
@@ -870,7 +668,6 @@ button {
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
-
     margin-bottom: 19px;
 }
 
@@ -888,139 +685,36 @@ button {
 }
 
 
-/* ==============================
-   TABLET RESPONSIVE DESIGN
-   Screen: 768px - 1240px
-============================== */
 
-@media (max-width: 1240px) and (min-width: 768px) {
-
-    /* Navigation and About */
-    .nav__inner,
-    .about__inner {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .about__img {
-        width: 48%;
-        height: auto;
-        aspect-ratio: 3 / 2;
-    }
-
-    /* Pricing cards */
-    .plans {
-        left: 0;
-
-        width: auto;
-        max-width: 640px;
-
-        grid-template-columns: 1fr 1fr;
-
-        row-gap: 40px;
-
-        padding: 0 20px;
-    }
-
-    .plan,
-    .plan--hot {
-        margin-top: 0;
-    }
-
-    .plan-slot {
-        width: auto;
-
-        display: flex;
-        justify-content: center;
-    }
-
-    /* Testimonials */
-    .testi__grid {
-        width: auto;
-
-        grid-template-columns: repeat(3, 1fr);
-
-        gap: 20px;
-
-        padding: 0 20px;
-    }
-
-    .card blockquote {
-        font-size: 15px;
-    }
-
-    /* FAQ */
-    .faq__inner {
-        width: auto;
-
-        padding: 0 30px;
-
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .faq__img {
-        width: 100%;
-        height: auto;
-
-        aspect-ratio: 3 / 2;
-    }
-
-    /* Footer */
-    .footer__inner {
-        padding: 0 40px;
-    }
-}
-
-
-/* ==============================
-   MOBILE RESPONSIVE DESIGN
-   Screen: 767px or smaller
-============================== */
-
+/* MOBILE RESPONSIVE */
 @media (max-width: 767.98px) {
 
-    /* ==================
-       MOBILE NAVIGATION
-    ================== */
-
+    /* NAVIGATION */
     .nav {
-        height: 110px;
+        height: 80px;
     }
 
     .nav__inner {
-        padding: 13px 27px 0 20px;
+        padding: 0 20px;
     }
 
     .nav__logo {
         font-size: 14px;
         line-height: 21px;
-
-        max-width: 150px;
-
-        font-weight: 700;
     }
 
-    /* Hamburger menu */
     .nav__burger {
         display: flex;
         flex-direction: column;
-
         gap: 6px;
-
         width: 28px;
-
-        padding: 0;
-        margin-bottom: 10px;
+        cursor: pointer;
     }
 
     .nav__burger span {
         display: block;
-
         height: 2px;
-
         background-color: #222;
-
-        border-radius: 1px;
     }
 
     .nav__burger span:last-child {
@@ -1028,28 +722,19 @@ button {
         align-self: flex-end;
     }
 
-    /* Mobile navigation links */
     .nav__links {
         display: none;
-
         position: absolute;
-
-        top: 110px;
+        top: 80px;
         left: 0;
-        right: 0;
-
+        width: 100%;
         background-color: white;
-
         flex-direction: column;
-
         gap: 0;
-
-        padding: 8px 20px 16px;
-
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    /* Show menu when JavaScript adds show class */
     .nav__links.show {
         display: flex;
     }
@@ -1059,27 +744,9 @@ button {
     }
 
 
-    /* ==================
-       MOBILE HERO
-    ================== */
-
+    /* HERO */
     .hero {
         height: 586px;
-    }
-
-    .hero__arrow {
-        width: 27px;
-        height: 46px;
-
-        top: 222px;
-    }
-
-    .hero__arrow--l {
-        left: 18px;
-    }
-
-    .hero__arrow--r {
-        right: 18px;
     }
 
     .hero__content {
@@ -1090,301 +757,146 @@ button {
     .hero h1 {
         font-size: 24px;
         line-height: 36px;
-
-        max-width: 324px;
     }
 
     .hero p {
+        font-size: 15px;
         margin-top: 9px;
-        max-width: 324px;
     }
 
     .btn-white {
-        margin-top: 11px;
-    }
-
-    .hero__dots {
-        bottom: 12px;
-        gap: 4px;
-    }
-
-    .hero__dots i {
-        width: 25px;
-        height: 3px;
+        margin-top: 15px;
     }
 
 
-    /* ==================
-       MOBILE ABOUT
-    ================== */
-
+    /* ABOUT */
     .about {
         padding: 65px 0 50px;
     }
 
     .about__inner {
         flex-direction: column;
-        align-items: stretch;
-
-        gap: 0;
-
+        gap: 20px;
         padding: 0 16px;
     }
 
-    .about__text {
-        display: contents;
-    }
-
-    /* Hide desktop image */
-    .about__img {
-        display: none;
-    }
-
-    /* Show mobile image */
-    .about__img--m {
-        display: block;
-
-        order: 3;
-
-        width: 328px;
-        height: 214px;
-
-        margin-top: 18px;
-
-        max-width: 100%;
+    .about__inner img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
     }
 
     .about h2 {
-        order: 1;
-
-        font-size: 19px;
-        line-height: 30px;
-
-        padding: 0 4px;
+        font-size: 22px;
+        line-height: 32px;
     }
 
     .about p {
-        order: 2;
-
-        margin-top: 15px;
-
-        padding: 0 4px;
-
         font-size: 15px;
-
-        max-width: none;
+        line-height: 25px;
+        margin-top: 12px;
     }
 
     .btn-blue {
-        order: 4;
-
-        margin: 20px auto 0;
+        margin-top: 20px;
     }
 
-    /* Discount message */
     .toast {
         top: 49px;
         left: 56px;
         right: auto;
+        max-width: calc(100% - 72px);
     }
 
 
-    /* ==================
-       MOBILE TITLES
-    ================== */
+    /* SECTION TITLES */
+    .title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+
+    /* PACKAGES */
+     .packages {
+        padding: 60px 18px;
+    }
 
     .title {
-        font-size: 18.75px;
-        line-height: 28px;
+        font-size: 23px;
     }
-
-    .testi .title,
-    .faq .title {
-        font-size: 19.2px;
-        font-weight: 500;
-        color: #222;
-    }
-
-
-    /* ==================
-       MOBILE PRICING
-    ================== */
 
     .plans {
-        left: 0;
-
-        width: auto;
-
-        margin: 53px 0 0;
-
-        padding: 0 16px;
-
         grid-template-columns: 1fr;
-
-        row-gap: 51px;
+        max-width: 400px;
+        margin-top: 40px;
+        gap: 25px;
     }
 
     .plan {
-        margin-top: 0;
-    }
-
-    .plan-slot {
-        width: 292px;
-        max-width: 100%;
+        padding: 28px 24px;
     }
 
     .plan--hot {
-        width: 100%;
+        padding-top: 45px;
     }
 
-
-    /* ==================
-       MOBILE TESTIMONIALS
-    ================== */
-
+    /* TESTIMONIALS */
     .testi {
-        margin-top: 50px;
+        margin-top: 60px;
     }
 
     .testi__grid {
-        width: 294px;
-
-        max-width: calc(100% - 32px);
-
-        margin-top: 28px;
-
+        width: 90%;
+        margin: 30px auto 0;
         grid-template-columns: 1fr;
-
-        gap: 26px;
+        gap: 25px;
     }
 
     .card {
         padding-top: 23px;
     }
 
-    .card blockquote {
-        font-size: 16px;
-    }
 
-    .card img {
-        margin-top: 12px;
-    }
-
-    .card b {
-        margin-top: 18px;
-    }
-
-    .card span {
-        margin-top: 1px;
-    }
+    
 
 
-    /* ==================
-       MOBILE FAQ
-    ================== */
-
+    /* FAQ */
     .faq {
-        margin-top: 51px;
+        margin-top: 60px;
         padding-bottom: 60px;
     }
 
-    .faq__inner {
-        width: auto;
-
-        margin-top: 36px;
-
-        padding: 0 20px;
-
-        grid-template-columns: 1fr;
-
-        row-gap: 25px;
+    .faq-container {
+        flex-direction: column;
+        margin-top: 40px;
     }
 
-    /* Hide desktop image */
-    .faq__img:not(.faq__img--m) {
-        display: none;
+    .faq-list,
+    .faq-image {
+        width: 100%;
     }
 
-    /* Show mobile image */
-    .faq__img--m {
-        display: block;
-
-        width: 324px;
-        max-width: 100%;
-
-        height: 301px;
-
-        margin: 0;
-
-        grid-column: 1;
-        grid-row: 1;
-
-        border-radius: 4px;
+    .question-title {
+        font-size: 15px;
+        padding: 15px;
     }
 
-    .faq__list {
-        grid-row: 2;
-        grid-column: 1;
-
-        margin: 0 11px 0 3px;
-    }
-
-    .q__head span {
-        max-width: 232px;
-    }
-
-    .q__head {
-        font-size: 16px;
-        line-height: 19px;
-
-        padding: 15px 16px;
-    }
-
-    .q:nth-child(2) .q__head {
-        line-height: 26px;
-        padding: 15px 16px;
-    }
-
-    .q,
-    .q.open {
-        margin-bottom: 16px;
-    }
-
-    .q:last-child {
-        margin-bottom: 0;
-    }
-
-    .q.open .q__head {
-        line-height: 28px;
-        padding: 15px 16px 0;
-    }
-
-    .q__body {
-        padding: 0 16px 7px;
-    }
-
-    .q__body p {
-        font-size: 14px;
-        margin-top: 8px;
+    .faq-image img {
+        height: 250px;
+        margin-top: 20px;
     }
 
 
-    /* ==================
-       MOBILE FOOTER
-    ================== */
-
+    /* FOOTER */
     .footer {
         height: auto;
     }
 
     .footer__inner {
         flex-direction: column-reverse;
-
         align-items: flex-start;
-
         gap: 28px;
-
-        padding: 44px 20px;
+        padding: 40px 20px;
     }
 
     .footer__app {
