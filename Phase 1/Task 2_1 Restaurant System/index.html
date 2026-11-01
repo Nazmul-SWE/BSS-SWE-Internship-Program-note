@@ -194,6 +194,81 @@
 
 
   <!-- =========================================================
+       4. BOOK YOUR TABLE
+       ========================================================= -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <p class="label">Book Now</p>
+      <h2 class="section-title">Book your table</h2>
+      <p class="booking-desc">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
+
+      <form class="booking-form" id="booking-form">
+        <input type="text" class="field" placeholder="Your Name *" required>
+        <input type="email" class="field" placeholder="Your Email">
+        <input type="text" class="field field-date" id="date-field" placeholder="Reservation Date">
+        <select class="field field-select" required>
+          <option value="" selected disabled>Total People</option>
+          <option>1 Person</option>
+          <option>2 People</option>
+          <option>3 People</option>
+          <option>4 People</option>
+          <option>5 People</option>
+          <option>6 People</option>
+          <option>7 People</option>
+          <option>8+ People</option>
+        </select>
+        <textarea class="field field-message" placeholder="Message"></textarea>
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       5. TESTIMONIALS
+       ========================================================= -->
+  <section class="testimonials" id="testimonials">
+    <img src="images/tomato-slice.png" alt="" class="decor decor-tomato">
+    <img src="images/herb.png" alt="" class="decor decor-herb">
+
+    <div class="container testimonials-container">
+      <p class="label">Crispy, Every Bite Taste</p>
+      <h2 class="section-title">What some of my customers say</h2>
+
+      <div class="slider-track" id="testi-track">
+        <div class="testimonial">
+          <!-- Yellow quote box -->
+          <div class="quote-box">
+            <p class="quote-text">You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy &amp; soft (usually mandi chicken is a bit dry). I would defiantly recommend it.</p>
+
+            <div class="author">
+              <div class="author-info">
+                <h4>Khalid Al Dawsry</h4>
+                <p>Jeddah, Saudi</p>
+              </div>
+              <img src="images/avatar.jpg" alt="Khalid Al Dawsry" class="avatar">
+            </div>
+            <img src="images/ornament.svg" alt="" class="ornament">
+          </div>
+
+          <!-- Video image -->
+          <div class="quote-video">
+            <img src="images/testimonial-food.jpg" alt="Chicken mandi served on rice">
+            <button class="play-btn" id="play-btn" aria-label="Play video"><span></span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider arrows -->
+      <div class="arrows">
+        <button class="arrow-btn" data-target="testi-track" data-dir="-1" aria-label="Previous"><img src="images/chevron-left.svg" alt=""></button>
+        <button class="arrow-btn" data-target="testi-track" data-dir="1" aria-label="Next"><img src="images/chevron-right.svg" alt=""></button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
        SMALL SCRIPT: menu, tabs, sliders, date field, form
        ========================================================= -->
   <script>
@@ -236,6 +311,26 @@
         var step = firstItem.offsetWidth + 32; // item width + gap
         track.scrollBy({ left: direction * step, behavior: 'smooth' });
       });
+    });
+
+    // 4) Reservation date field: show a calendar when it is clicked
+    var dateField = document.getElementById('date-field');
+    dateField.addEventListener('focus', function () { dateField.type = 'date'; });
+    dateField.addEventListener('blur', function () {
+      if (dateField.value === '') { dateField.type = 'text'; }
+    });
+
+    // 5) Booking form: show a thank-you message
+    document.getElementById('booking-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Thank you! Your table request has been received.');
+      event.target.reset();
+      dateField.type = 'text';
+    });
+
+    // 6) Play button
+    document.getElementById('play-btn').addEventListener('click', function () {
+      alert('Video coming soon!');
     });
   </script>
 
