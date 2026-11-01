@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant | Taste the Authentic Saudi Cuisine</title>
+
+  <!-- Google Fonts: Bebas Neue (headings), Roboto + Inter + Open Sans + Poppins (text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       1. HERO (header + main banner)
+       ========================================================= -->
+  <section class="hero" id="home">
+    <div class="container">
+
+      <!-- Header / navigation -->
+      <header class="header">
+        <a href="#home" class="logo">
+          <img src="images/logo-icon.svg" alt="" class="logo-icon">
+          <span class="logo-text"><b>Restau</b>rant</span>
+        </a>
+
+        <!-- Menu button (only visible on mobile) -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <img src="images/icon-menu.svg" alt="">
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#popular">Portfolio</a></li>
+            <li><a href="#testimonials">Clients</a></li>
+            <li><a href="#footer">Blog</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+          <a href="#booking" class="btn">Book a table</a>
+        </nav>
+      </header>
+
+      <!-- Hero content -->
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Taste the authentic<br>Saudi cuisine</h1>
+          <p class="hero-desc">Among the best Saudi chefs in the world, serving you something beyond flavor.</p>
+          <a href="#popular" class="btn">Explore Menu</a>
+        </div>
+
+        <div class="hero-image">
+          <img src="images/hero-food.jpg" alt="Grilled ribs served with fries and sauce" class="hero-photo">
+          <img src="images/star.svg" alt="" class="hero-star">
+          <div class="offer-badge">
+            <span>Today<br>Offer</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       SMALL SCRIPT: menu, tabs, sliders, date field, form
+       ========================================================= -->
+  <script>
+    // 1) Mobile menu: show / hide the navigation
+    var menuButton = document.getElementById('menu-toggle');
+    var nav = document.getElementById('nav');
+
+    menuButton.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', isOpen);
+    });
+
+    // close the menu after clicking a link
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', false);
+      });
+    });
+  </script>
+
+</body>
+</html>
