@@ -67,6 +67,133 @@
 
 
   <!-- =========================================================
+       2. ABOUT
+       ========================================================= -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="about-grid">
+        <!-- Left: photo + "50+" card -->
+        <div class="about-image">
+          <img src="images/about-burger.jpg" alt="Burger with fries and a cold drink" class="about-photo">
+          <div class="stat-card">
+            <div class="stat-ring">
+              <img src="images/ring-50.svg" alt="">
+              <span>50+</span>
+            </div>
+            <p>Market<br>Experiences</p>
+          </div>
+        </div>
+
+        <!-- Right: tabs + text -->
+        <div class="about-content">
+          <div class="tabs">
+            <button class="tab active" data-tab="tab-about">About</button>
+            <button class="tab" data-tab="tab-experience">Experience</button>
+            <button class="tab" data-tab="tab-contact">Contact</button>
+          </div>
+
+          <h2 class="section-title">Exceptional culinary experience and delicious food</h2>
+
+          <div class="tab-panel active" id="tab-about">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare non sed est cursus. Vel hac convallis ipsum, facilisi odio pellentesque bibendum viverra tempus. Lorem ipsum dolor sit amet consectetur adipiscing elit do eiusmod tempor incididunt ut labore et dolore magna minim veniam nostrud exercitation.</p>
+          </div>
+          <div class="tab-panel" id="tab-experience">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="tab-panel" id="tab-contact">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+          </div>
+
+          <div class="about-actions">
+            <a href="#booking" class="btn">About More</a>
+            <a href="tel:+883426739485" class="phone-link">
+              <img src="images/icon-phone-red.svg" alt="">
+              <span>+88 3426 739 485</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three feature boxes -->
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon"><img src="images/icon-box.svg" alt=""></span>
+          <div>
+            <h3>Fast delivery</h3>
+            <p>Within 30 minutes</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon"><img src="images/icon-award.svg" alt=""></span>
+          <div>
+            <h3>Absolute dining</h3>
+            <p>Best buffet restaurant</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon"><img src="images/icon-bag.svg" alt=""></span>
+          <div>
+            <h3>Pickup delivery</h3>
+            <p>Grab your food order</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Decoration: salad bowl on the right edge -->
+    <img src="images/salad-bowl.png" alt="" class="decor decor-bowl">
+  </section>
+
+
+  <!-- =========================================================
+       3. POPULAR FOOD ITEMS (slider)
+       ========================================================= -->
+  <section class="popular" id="popular">
+    <img src="images/pepper-rings.png" alt="" class="decor decor-rings">
+
+    <div class="container popular-container">
+      <p class="label">Crispy, Every Bite Taste</p>
+      <h2 class="section-title">Popular food items</h2>
+
+      <div class="slider-track" id="food-track">
+        <article class="food-card">
+          <img src="images/burger.jpg" alt="Vegetables burger">
+          <span class="card-line"></span>
+          <h3>Vegetables burger</h3>
+          <p>Barbecue Italian cuisine pizza</p>
+        </article>
+        <article class="food-card">
+          <img src="images/pizza.png" alt="Special pizza">
+          <span class="card-line"></span>
+          <h3>Spacial Pizza</h3>
+          <p>Barbecue Italian cuisine pizza</p>
+        </article>
+        <article class="food-card">
+          <img src="images/fries.jpg" alt="Special French fries">
+          <span class="card-line"></span>
+          <h3>Spacial French fries</h3>
+          <p>Barbecue Italian cuisine</p>
+        </article>
+        <article class="food-card">
+          <img src="images/chicken.jpg" alt="Cuisine chicken">
+          <span class="card-line"></span>
+          <h3>Cuisine Chicken</h3>
+          <p>Japanese Cuisine Chicken</p>
+        </article>
+      </div>
+
+      <!-- Slider arrows -->
+      <div class="arrows">
+        <button class="arrow-btn" data-target="food-track" data-dir="-1" aria-label="Previous"><img src="images/chevron-left.svg" alt=""></button>
+        <button class="arrow-btn" data-target="food-track" data-dir="1" aria-label="Next"><img src="images/chevron-right.svg" alt=""></button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
        SMALL SCRIPT: menu, tabs, sliders, date field, form
        ========================================================= -->
   <script>
@@ -84,6 +211,30 @@
       link.addEventListener('click', function () {
         nav.classList.remove('open');
         menuButton.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // 2) About tabs: switch the text when a tab is clicked
+    var tabs = document.querySelectorAll('.tab');
+    var panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.classList.remove('active'); });
+        panels.forEach(function (p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // 3) Slider arrows: scroll the track left or right
+    document.querySelectorAll('.arrow-btn').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var track = document.getElementById(button.dataset.target);
+        var direction = Number(button.dataset.dir);
+        var firstItem = track.firstElementChild;
+        var step = firstItem.offsetWidth + 32; // item width + gap
+        track.scrollBy({ left: direction * step, behavior: 'smooth' });
       });
     });
   </script>
