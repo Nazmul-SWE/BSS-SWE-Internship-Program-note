@@ -527,8 +527,7 @@ button {
 }
 
 /* Arrows sit at the top right on desktop */
-.popular .arrows,
-.testimonials .arrows {
+.popular .arrows {
   position: absolute;
   top: 21px;
   right: 24px;
@@ -582,263 +581,6 @@ button {
   width: auto;
 }
 
-/* ---------- 6. BOOK YOUR TABLE ---------- */
-.booking {
-  padding: 127px 0 86px;
-  background: #1a1a1a url('images/booking-bg.jpg') center 30% / cover no-repeat;
-  color: #ffffff;
-}
-
-.booking .section-title {
-  margin-top: 18px;
-  color: #ffffff;
-}
-
-.booking-desc {
-  max-width: 500px;
-  margin-top: 15px;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.booking-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px 30px;
-  max-width: 635px;
-  margin-top: 41px;
-}
-
-.field {
-  width: 100%;
-  height: 46px;
-  padding: 0 16px;
-  background: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 0;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  outline: none;
-}
-
-.field::placeholder {
-  color: #ffffff;
-  opacity: 1;
-}
-
-.field:focus {
-  border-color: var(--yellow);
-}
-
-/* Date field: calendar icon on the right */
-.field-date {
-  position: relative;
-  background: url('images/icon-calendar.svg') no-repeat right 16px center / 20px;
-  color-scheme: dark;
-}
-
-.field-date::-webkit-calendar-picker-indicator {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 48px;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* Select: up/down arrows on the right */
-.field-select {
-  appearance: none;
-  -webkit-appearance: none;
-  background: url('images/icon-updown.svg') no-repeat right 16px center / 20px;
-  cursor: pointer;
-}
-
-.field-select option {
-  color: #111111;
-}
-
-.field-message {
-  grid-column: 1 / -1;
-  height: 140px;
-  padding-top: 14px;
-  resize: none;
-}
-
-.booking-form .btn {
-  grid-column: 1 / -1;
-  justify-self: start;
-  margin-top: 8px;
-}
-
-/* ---------- 7. TESTIMONIALS ---------- */
-.testimonials {
-  position: relative;
-  padding: 124px 0 118px;
-  overflow: hidden;
-}
-
-.testimonials-container {
-  position: relative;
-}
-
-.testimonials .section-title {
-  margin-top: 18px;
-}
-
-.testimonials .slider-track {
-  margin-top: 62px;
-}
-
-.testimonial {
-  flex: 0 0 100%;
-  display: grid;
-  grid-template-columns: 42.12fr 57.88fr;
-  min-height: 556px;
-  scroll-snap-align: start;
-}
-
-/* Yellow quote box */
-.quote-box {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 92px 86px 73px 111px;
-  background: var(--yellow);
-}
-
-.quote-text {
-  position: relative;
-  font-size: 20px;
-  line-height: 34px;
-  color: #111111;
-}
-
-.quote-text::before {
-  content: '\201C';
-  position: absolute;
-  top: -4px;
-  left: -23px;
-  font-family: Georgia, serif;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.author {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding-bottom: 17px;
-  border-bottom: 1px solid #111111;
-}
-
-/* short thick red line at the end of the author line */
-.author::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: -2px;
-  width: 40px;
-  height: 3px;
-  background: var(--red);
-}
-
-.author h4 {
-  font-family: 'Bebas Neue', Impact, sans-serif;
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 1.1;
-  text-transform: uppercase;
-  color: #111111;
-}
-
-.author p {
-  font-size: 14px;
-  line-height: 20px;
-  color: #111111;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.ornament {
-  position: absolute;
-  left: 0;
-  bottom: 42px;
-  width: 40px;
-  height: 78px;
-}
-
-/* Video picture with play button */
-.quote-video {
-  position: relative;
-  min-height: 556px;
-}
-
-.quote-video > img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 30% 50%;
-}
-
-.quote-video::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);   /* dark layer over the photo */
-}
-
-.play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  width: 50px;
-  height: 50px;
-  margin: -25px 0 0 -25px;
-  border-radius: 50%;
-  background: var(--yellow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s;
-}
-
-.play-btn:hover {
-  transform: scale(1.1);
-}
-
-.play-btn span {
-  margin-left: 4px;
-  border-left: 15px solid #111111;
-  border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent;
-}
-
-.decor-tomato {
-  top: 182px;
-  left: -126px;
-  width: 264px;
-}
-
-.decor-herb {
-  top: 516px;
-  right: -80px;
-  width: 380px;
-}
-
 /* =========================================================
    TABLET  (up to 1100px)
    ========================================================= */
@@ -860,8 +602,7 @@ button {
     line-height: 28px;
   }
 
-  .popular .arrows,
-  .testimonials .arrows {
+  .popular .arrows {
     right: 32px;
   }
 
@@ -882,15 +623,6 @@ button {
   .feature-icon {
     width: 72px;
     height: 72px;
-  }
-
-  .quote-box {
-    padding: 60px 40px 50px 64px;
-  }
-
-  .decor-herb {
-    width: 260px;
-    right: -60px;
   }
 }
 
@@ -1026,8 +758,7 @@ button {
     padding: 60px 0;
   }
 
-  .popular .arrows,
-  .testimonials .arrows {
+  .popular .arrows {
     position: static;
     justify-content: center;
     gap: 20px;
@@ -1044,44 +775,8 @@ button {
     height: 20px;
   }
 
-  .popular .slider-track,
-  .testimonials .slider-track {
+  .popular .slider-track {
     margin-top: 40px;
-  }
-
-  /* Booking + testimonials */
-  .booking {
-    padding: 60px 0;
-  }
-
-  .testimonials {
-    padding: 60px 0;
-  }
-
-  .testimonial {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .quote-video {
-    order: -1;
-    min-height: 0;
-    aspect-ratio: 16 / 9;
-  }
-
-  .quote-box {
-    gap: 40px;
-    padding: 46px 40px 26px 54px;
-  }
-
-  .author {
-    margin: 0 -15px;
-  }
-
-  .ornament {
-    bottom: 0;
-    width: 24px;
-    height: 46px;
   }
 }
 
@@ -1243,16 +938,8 @@ button {
     margin-top: 34px;
   }
 
-  .testimonials .slider-track {
-    margin-top: 30px;
-  }
-
   .popular .arrows {
     margin-top: 16px;
-  }
-
-  .testimonials .arrows {
-    margin-top: 23px;
   }
 
   .tab {
@@ -1263,59 +950,12 @@ button {
     color: #111111;
   }
 
-  .popular .section-title,
-  .booking .section-title,
-  .testimonials .section-title {
+  .popular .section-title {
     margin-top: 12px;
     line-height: 1.2;
   }
 
   .food-card {
     flex-basis: 100%;
-  }
-
-  .booking {
-    padding: 30px 0 31px;
-    background-position: 56% center;
-  }
-
-  .booking-desc {
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 14px;
-  }
-
-  .booking-form {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 32px;
-  }
-
-  .testimonials {
-    padding: 29px 0;
-  }
-
-  .quote-box {
-    padding: 46px 22px 26px 44px;
-  }
-
-  .quote-text {
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  .author {
-    margin: 0 -5px 0 -19px;
-  }
-
-  .quote-video {
-    aspect-ratio: 330 / 240;
-  }
-
-  .ornament {
-    left: 0;
-    bottom: 0;
-    width: 24px;
-    height: 46px;
   }
 }
