@@ -102,7 +102,7 @@ button {
 .section-title {
   font-family: 'Bebas Neue', Impact, sans-serif;
   font-size: clamp(40px, 5.2vw, 62px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
   color: var(--text);
@@ -183,14 +183,14 @@ button {
 }
 
 .logo-icon {
-  width: 36px;
-  height: 36px;
+  width: 37px;
+  height: 37px;
 }
 
 .logo-text {
   font-family: 'Poppins', Arial, sans-serif;
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 28.44px;
+  font-weight: 400;
   line-height: 1;
 }
 
@@ -212,10 +212,10 @@ button {
 }
 
 .nav-list a {
-  font-family: 'Poppins', Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  transition: opacity 0.2s;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+
 }
 
 .nav-list a:hover {
@@ -224,7 +224,7 @@ button {
 
 .nav .btn {
   height: 44px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* Menu button: hidden on desktop */
@@ -259,7 +259,7 @@ button {
 }
 
 .hero-desc {
-  max-width: 540px;
+  max-width: 559px;
   margin-top: 16px;
   font-size: 24px;
   line-height: 32px;
@@ -295,8 +295,8 @@ button {
   position: absolute;
   right: -51px;
   bottom: 3px;
-  width: 120px;
-  height: 120px;
+  width: 105.5px;
+  height: 105.5px;
   border-radius: 50%;
   background: #fec51a;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
@@ -317,7 +317,7 @@ button {
 .offer-badge span {
   position: relative;
   font-family: 'Bebas Neue', Impact, sans-serif;
-  font-size: 36px;
+  font-size: 34px;
   line-height: 1;
   text-transform: uppercase;
   color: var(--navy);
@@ -398,7 +398,7 @@ button {
 .tab {
   height: 36px;
   padding: 0 16px;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: #111111;
@@ -424,8 +424,9 @@ button {
 }
 
 .tab-panel p {
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 15px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 26px;
   color: var(--body);
 }
@@ -479,7 +480,7 @@ button {
 
 .feature h3 {
   font-family: 'Bebas Neue', Impact, sans-serif;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
@@ -488,8 +489,8 @@ button {
 
 .feature p {
   margin-top: 6px;
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 18px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 20px;
   line-height: 26px;
   color: #111111;
 }
@@ -540,7 +541,7 @@ button {
 
 .food-card img {
   width: auto;
-  height: 125px;
+  height: 120px;
   margin: 0 auto;
 }
 
@@ -564,8 +565,8 @@ button {
 
 .food-card p {
   margin-top: 10px;
-  font-family: 'Inter', Arial, sans-serif;
-  font-size: 14.5px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
   line-height: 20px;
   color: #111111;
 }
@@ -853,15 +854,15 @@ button {
 }
 
 .info-item img {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   margin: 0 auto;
 }
 
 .info-item h3 {
   margin-top: 27px;
   font-family: 'Bebas Neue', Impact, sans-serif;
-  font-size: 23px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: 1.7px;
   line-height: 1.1;
@@ -897,8 +898,8 @@ button {
 }
 
 .social img {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
 .copyright {
@@ -949,8 +950,8 @@ button {
   }
 
   .feature-icon {
-    width: 72px;
-    height: 72px;
+    width: 90px;
+    height: 90px;
   }
 
   .quote-box {
@@ -1253,24 +1254,27 @@ button {
     height: 73px;
     padding-left: 12px;
     gap: 5px;
-    border-radius: 12px;
+    border-radius: 20px;
     transform: none;
   }
 
   .stat-ring {
     width: 50px;
     height: 50px;
+  
   }
 
   .stat-ring img {
     width: 50px;
     height: 50px;
+      
   }
 
   .stat-ring span {
     font-size: 13px;
   }
 
+ 
   .stat-card p {
     font-size: 10px;
     line-height: 14px;
