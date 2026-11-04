@@ -110,6 +110,46 @@ button {
 
 
 
+/* Left and right side arrows */
+.hero__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+}
+
+.hero__arrow--left {
+    left: 24px;
+}
+
+.hero__arrow--right {
+    right: 24px;
+}
+
+/* Draw the arrow shape with a border */
+.hero__arrow::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    width: 14px;
+    height: 14px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+.hero__arrow--left::before {
+    left: 16px;
+    transform: rotate(-45deg);
+}
+
+.hero__arrow--right::before {
+    right: 16px;
+    transform: rotate(135deg);
+}
+
+
 /* Hero text */
 .hero__content {
     position: absolute;
@@ -283,30 +323,19 @@ button {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 
-    align-items: center;
+    /* align to the bottom, so the "Wedding plus" card sticks out at the top */
+    align-items: end;
 }
 
 
-/* Single Card */
+/* Single Card (plain, no shadow, no card look) */
 
 .plan {
     background-color: white;
 
-    padding: 30px 22px;
+    padding: 30px 22px 0;
 
     border-radius: 15px;
-
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-
-    transition: 0.3s;
-}
-
-
-/* Card Hover */
-
-.plan:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -424,6 +453,8 @@ button {
 
     color: white;
 
+    /* the only card with a shadow */
+
     box-shadow: 0 20px 35px rgba(63, 135, 245, 0.3);
 }
 
@@ -463,8 +494,8 @@ button {
 
 .hot {
     position: absolute;
-    top: 12px;
-    right: 15px;
+    top: -6px;
+    right: 12px;
 
     background-color: #ff4e4e;
     color: white;
@@ -598,6 +629,24 @@ button {
     font-weight: 500;
     text-align: left;
     color: #383838;
+}
+
+/* ARROW (small chevron, points down when closed) */
+.arrow {
+    flex: none;
+    width: 9px;
+    height: 9px;
+    margin: 0 4px 4px 15px;
+    border-right: 2px solid #3d5a6c;
+    border-bottom: 2px solid #3d5a6c;
+    transform: rotate(45deg);
+}
+
+/* Arrow points up when open */
+.question.open .arrow {
+    margin-bottom: 0;
+    margin-top: 6px;
+    transform: rotate(225deg);
 }
 
 /* ANSWER */
