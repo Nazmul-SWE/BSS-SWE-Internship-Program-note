@@ -1,4 +1,4 @@
-/* Put the clock in the middle of the page */
+
 body {
   margin: 0;
   height: 100vh;
@@ -8,26 +8,25 @@ body {
   background: white;
 }
 
-/* STEP 1: The round clock face */
+
 .clock {
   width: 300px;
   height: 300px;
-  border: 4px solid #333;   /* the border you can see */
-  border-radius: 50%;       /* 50% turns a square into a circle */
-  position: relative;       /* IMPORTANT: hands are placed inside this box */
+  border: 4px solid #333;  
+  border-radius: 50%;       
+  position: relative;       
 }
 
-/* STEP 2 + 3: Hands (shared settings) */
+
 .hand {
-  position: absolute;   /* lets us place the hand anywhere inside the clock */
-  bottom: 50%;          /* bottom of the hand sits on the clock's center line */
-  left: 50%;            /* hand sits on the horizontal center */
+  position: absolute;  
+  bottom: 50%;          
+  left: 50%;            
 
   /* STEP 4: THE PIVOT
      By default a shape spins around its own middle.
      We want it to spin around its bottom end (the clock center). */
   transform-origin: bottom center;
-
   animation-name: spin;                  /* use the "spin" animation below */
   animation-timing-function: linear;     /* constant speed */
   animation-iteration-count: infinite;   /* never stop */
