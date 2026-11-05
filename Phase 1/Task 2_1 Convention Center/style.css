@@ -304,13 +304,13 @@ button {
 
     border-radius: 15px;
 
-    transition: 0.3s;
-}
+    /* group30 picture */
+    background-image: url(img/group30.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto 100%;
 
-.plan:hover {
-    background-color: #3f87f5;
-    box-shadow: 0 20px 35px rgba(63, 135, 245, 0.3);
-    transform: translateY(-10px);
+    transition: 0.3s;
 }
 
 .plan__price {
@@ -400,26 +400,37 @@ button {
     transition: 0.3s;
 }
 
-.plan:hover .plan__price,
-.plan:hover h3,
-.plan:hover .plan__desc,
-.plan:hover li {
-    color: white;
-}
+/* hover effect only on desktop and tablet (not on mobile) */
+@media (min-width: 768px) {
 
-.plan:hover li::before {
-    background-color: white;
-    color: #3f87f5;
-}
+    .plan:hover {
+        background-color: #3f87f5;
+        box-shadow: 0 20px 35px rgba(63, 135, 245, 0.3);
+        transform: translateY(-10px);
+    }
 
-.plan:hover .plan__btn {
-    background-color: white;
-    color: #3f87f5;
-}
+    .plan:hover .plan__price,
+    .plan:hover h3,
+    .plan:hover .plan__desc,
+    .plan:hover li {
+        color: white;
+    }
 
-.plan:hover .plan__btn:hover {
-    background-color: #231d4f;
-    color: white;
+    .plan:hover li::before {
+        background-color: white;
+        color: #3f87f5;
+    }
+
+    .plan:hover .plan__btn {
+        background-color: white;
+        color: #3f87f5;
+    }
+
+    .plan:hover .plan__btn:hover {
+        background-color: #231d4f;
+        color: white;
+    }
+
 }
 
 .hot {
@@ -782,36 +793,6 @@ button {
 
     .plan {
         padding: 28px 24px;
-    }
-
-    /* blue card: Wedding Plus always, other cards when pressed */
-    .plan--hot,
-    .plan:active {
-        background-color: #3f87f5;
-        box-shadow: 0 20px 35px rgba(63, 135, 245, 0.3);
-    }
-
-    .plan--hot .plan__price,
-    .plan--hot h3,
-    .plan--hot .plan__desc,
-    .plan--hot li,
-    .plan:active .plan__price,
-    .plan:active h3,
-    .plan:active .plan__desc,
-    .plan:active li {
-        color: white;
-    }
-
-    .plan--hot li::before,
-    .plan:active li::before {
-        background-color: white;
-        color: #3f87f5;
-    }
-
-    .plan--hot .plan__btn,
-    .plan:active .plan__btn {
-        background-color: white;
-        color: #3f87f5;
     }
 
     /* Testimonials */
