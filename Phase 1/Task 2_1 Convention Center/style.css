@@ -40,31 +40,31 @@ button {
     z-index: 20;
 }
 
-.nav__inner {
-    max-width: 1128px;
+.nav-inner {
+    max-width: 1122px;
     height: 100%;
     margin: 0 auto;
     padding-top: 6px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
+   
 }
 
-.nav__logo {
+.nav-logo {
     font-size: 22px;
     font-weight: 600;
     line-height: 33px;
     color: #3e3e3e;
 }
 
-.nav__links {
+.nav-links {
     display: flex;
     gap: 26px;
     margin-top: 2px;
 }
 
-.nav__links a {
+.nav-links a {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -400,7 +400,7 @@ button {
     transition: 0.3s;
 }
 
-/* hover effect only on desktop and tablet (not on mobile) */
+/* Hover Effect - Desktop and Tablet */
 @media (min-width: 768px) {
 
     .plan:hover {
@@ -433,26 +433,20 @@ button {
 
 }
 
+/* Hot Badge */
 .hot {
     position: absolute;
     top: -6px;
     right: 12px;
-
     background-color: #ff4e4e;
     color: white;
-
     padding: 6px 12px;
-
     border-radius: 20px;
-
     font-size: 12px;
     font-weight: 600;
 }
 
-/* 
-   TESTIMONIAL SECTION
-*/
-
+/* TESTIMONIAL SECTION */
 .testi {
     margin-top: 138px;
 }
@@ -499,7 +493,6 @@ button {
     font-size: 14px;
     font-weight: 600;
     line-height: 21px;
-
     color: #0c1920;
 }
 
@@ -512,10 +505,7 @@ button {
     color: #747474;
 }
 
-/* 
-   FAQ SECTION
- */
-
+/* FAQ SECTION */
 .faq {
     margin-top: 100px;
     padding-bottom: 100px;
@@ -525,7 +515,6 @@ button {
     width: 90%;
     max-width: 1122px;
     margin: 80px auto;
-
     display: flex;
     gap: 25px;
 }
@@ -544,14 +533,11 @@ button {
 .question-title {
     width: 100%;
     padding: 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     border: none;
     background-color: white;
-
     font-size: 18px;
     font-weight: 500;
     text-align: left;
@@ -601,10 +587,7 @@ button {
     margin-top: 40px;
 }
 
-/* 
-   FOOTER
- */
-
+/* FOOTER */
 .footer {
     height: 280px;
     background-color: #0b0d17;
@@ -650,19 +633,19 @@ button {
     height: 40px;
 }
 
-/* Mobile styles */
-@media (max-width: 767.98px) {
+/* MOBILE STYLES */
+@media (max-width: 768px) {
 
     /* Navigation */
     .nav {
         height: 80px;
     }
 
-    .nav__inner {
+    .nav-inner {
         padding: 0 20px;
     }
 
-    .nav__logo {
+    .nav-logo {
         font-size: 14px;
         line-height: 21px;
     }
@@ -686,7 +669,7 @@ button {
         align-self: flex-end;
     }
 
-    .nav__links {
+    .nav-links {
         display: none;
         position: absolute;
         top: 80px;
@@ -699,7 +682,7 @@ button {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .nav__links.show {
+    .nav-links.show {
         display: flex;
     }
 
@@ -768,20 +751,18 @@ button {
         left: 56px;
         right: auto;
         max-width: calc(100% - 72px);
+        
     }
 
+    /* Common Title */
     .title {
-        font-size: 20px;
+        font-size: 23px;
         line-height: 30px;
     }
 
     /* Packages */
     .packages {
         padding: 60px 18px;
-    }
-
-    .title {
-        font-size: 23px;
     }
 
     .plans {
@@ -793,6 +774,38 @@ button {
 
     .plan {
         padding: 28px 24px;
+         
+        background-image: url(img/group30.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto 100%;
+
+    transition: 0.3s;
+    }
+.plan:hover {
+     background-color: #3f87f5;
+}
+
+.plan:hover .plan__price,
+    .plan:hover h3,
+    .plan:hover .plan__desc,
+    .plan:hover li {
+        color: white;
+    }
+
+    .plan:hover li::before {
+        background-color: white;
+        color: #3f87f5;
+    }
+
+    .plan:hover .plan__btn {
+        background-color: white;
+        color: #3f87f5;
+    }
+
+    .plan:hover .plan__btn:hover {
+        background-color: #231d4f;
+        color: white;
     }
 
     /* Testimonials */
@@ -818,7 +831,7 @@ button {
     }
 
     .faq-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 40px;
     }
 
@@ -844,13 +857,15 @@ button {
 
     .footer__inner {
         flex-direction: column-reverse;
-        align-items: flex-start;
+        align-items: center;
         gap: 28px;
         padding: 40px 20px;
     }
 
     .footer__app {
         padding-top: 0;
+        align-items: center;
+        margin:auto;
     }
 
 }
