@@ -1,17 +1,14 @@
-/* 
-   RESTAURANT LANDING PAGE
-   Fonts: Bebas Neue (headings), Roboto / Inter / Open Sans / Poppins (text)
-   */
-/*  1. BASIC RESET + VARIABLES  */
+/* Base styles and variables */
+
 :root {
-  --red-hero: #c4342b;     /* hero background */
-  --red: #bd1f17;          /* labels, lines, small accents */
-  --red-tab: #b52b1d;      /* active tab */
-  --yellow: #febf00;       /* buttons, testimonial box */
-  --cream: #fbf7f2;        /* popular food background */
-  --navy: #0a1425;         /* button text + small titles */
-  --text: #181818;         /* headings */
-  --body: #333333;         /* paragraphs */
+  --red-hero: #c4342b;     
+  --red: #bd1f17;          
+  --red-tab: #b52b1d;      
+  --yellow: #febf00;       
+  --cream: #fbf7f2;        
+  --navy: #0a1425;         
+  --text: #181818;         
+  --body: #333333;         
 }
 
 * {
@@ -31,8 +28,6 @@ body {
 
 }
 
-
-
 a {
   color: inherit;
   text-decoration: none;
@@ -50,15 +45,14 @@ button {
   cursor: pointer;
 }
 
-/* Centered content area: 1320px wide on a 1920px screen */
 .container {
   max-width: 1368px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ---------- 2. REUSABLE PARTS ---------- */
-/* Yellow button */
+/* Reusable components */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -80,7 +74,6 @@ button {
   transform: translateY(-2px);
 }
 
-/* Small red label with a square bullet */
 .label {
   display: flex;
   align-items: center;
@@ -98,7 +91,6 @@ button {
   background: var(--red);
 }
 
-/* Big Bebas Neue section title */
 .section-title {
   font-family: 'Bebas Neue', Impact, sans-serif;
   font-size: clamp(40px, 5.2vw, 62px);
@@ -108,7 +100,6 @@ button {
   color: var(--text);
 }
 
-/* Round slider arrows (previous / next) */
 .arrows {
   display: flex;
   gap: 32px;
@@ -135,7 +126,6 @@ button {
   height: 24px;
 }
 
-/* Horizontal row that the arrows scroll (used by both sliders) */
 .slider-track {
   display: flex;
   gap: 32px;
@@ -148,13 +138,13 @@ button {
   display: none;
 }
 
-/* Decorative food pictures (placed with position: absolute) */
 .decor {
   position: absolute;
   pointer-events: none;
 }
 
-/* ---------- 3. HERO ---------- */
+/* Hero section */
+
 .hero {
   background-color: var(--red-hero);
   background-image:
@@ -167,7 +157,6 @@ button {
   overflow: hidden;
 }
 
-/* --- Header / navigation --- */
 .header {
   position: relative;
   display: flex;
@@ -227,12 +216,10 @@ button {
   font-size: 16px;
 }
 
-/* Menu button: hidden on desktop */
 .menu-toggle {
   display: none;
 }
 
-/* --- Hero content: text on the left, photo on the right --- */
 .hero-content {
   display: flex;
   align-items: center;
@@ -245,7 +232,7 @@ button {
   z-index: 2;
   flex: none;
   width: 62.9%;
-  margin-right: -15.8%;   /* text overlaps the photo, like in the design */
+  margin-right: -15.8%;   
 }
 
 .hero-title {
@@ -255,7 +242,7 @@ button {
   line-height: 1.05;
   text-transform: uppercase;
   padding: 10px 0;
-  background: rgba(196, 52, 43, 0.7);   /* red see-through box behind the title */
+  background: rgba(196, 52, 43, 0.7);   
 }
 
 .hero-desc {
@@ -290,7 +277,6 @@ button {
   height: 50px;
 }
 
-/* Yellow "Today Offer" circle */
 .offer-badge {
   position: absolute;
   right: -51px;
@@ -323,7 +309,8 @@ button {
   color: var(--navy);
 }
 
-/* ---------- 4. ABOUT ---------- */
+/* About section */
+
 .about {
   position: relative;
   padding: 120px 0;
@@ -337,7 +324,6 @@ button {
   align-items: start;
 }
 
-/* Photo + "50+" card */
 .about-image {
   position: relative;
 }
@@ -388,7 +374,6 @@ button {
   color: #111111;
 }
 
-/* Tabs: About / Experience / Contact */
 .tabs {
   display: flex;
   gap: 16px;
@@ -452,7 +437,6 @@ button {
   height: 24px;
 }
 
-/* Three feature boxes */
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -495,14 +479,14 @@ button {
   color: #111111;
 }
 
-/* Salad bowl on the right edge */
 .decor-bowl {
   top: 446px;
   right: -88px;
   width: 230px;
 }
 
-/* ---------- 5. POPULAR FOOD ITEMS ---------- */
+/* Popular food */
+
 .popular {
   position: relative;
   padding: 125px 0 119px;
@@ -522,7 +506,6 @@ button {
   margin-top: 62px;
 }
 
-/* Arrows sit at the top right on desktop */
 .popular .arrows,
 .testimonials .arrows {
   position: absolute;
@@ -531,7 +514,7 @@ button {
 }
 
 .food-card {
-  flex: 0 0 calc((100% - 96px) / 4);   /* 4 cards on desktop */
+  flex: 0 0 calc((100% - 96px) / 4);   
   min-height: 300px;
   padding: 29px 20px 30px;
   background: #ffffff;
@@ -578,7 +561,8 @@ button {
   width: auto;
 }
 
-/* ---------- 6. BOOK YOUR TABLE ---------- */
+/* Table booking */
+
 .booking {
   padding: 127px 0 86px;
   background: #1a1a1a url('images/booking-bg.jpg') center 30% / cover no-repeat;
@@ -627,16 +611,12 @@ button {
   border-color: var(--yellow);
 }
 
-/* Date field: calendar icon on the right */
 .field-date {
   position: relative;
   background: url('images/icon-calendar.svg') no-repeat right 16px center / 20px;
   color-scheme: dark;
 }
 
-
-
-/* Select: up/down arrows on the right */
 .field-select {
   appearance: none;
   -webkit-appearance: none;
@@ -660,7 +640,8 @@ button {
   margin-top: 8px;
 }
 
-/* ---------- 7. TESTIMONIALS ---------- */
+/* Testimonials */
+
 .testimonials {
   position: relative;
   padding: 124px 0 118px;
@@ -687,7 +668,6 @@ button {
   scroll-snap-align: start;
 }
 
-/* Yellow quote box */
 .quote-box {
   position: relative;
   display: flex;
@@ -724,7 +704,6 @@ button {
   border-bottom: 1px solid #111111;
 }
 
-/* short thick red line at the end of the author line */
 .author::after {
   content: '';
   position: absolute;
@@ -765,7 +744,6 @@ button {
   height: 78px;
 }
 
-/* Video picture with play button */
 .quote-video {
   position: relative;
   min-height: 556px;
@@ -784,7 +762,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3);   /* dark layer over the photo */
+  background: rgba(0, 0, 0, 0.3);   
 }
 
 .play-btn {
@@ -826,7 +804,8 @@ button {
   width: 380px;
 }
 
-/* ---------- 8. FOOTER ---------- */
+/* Footer */
+
 .footer {
   padding: 118px 24px 119px;
   background:
@@ -909,9 +888,6 @@ button {
   letter-spacing: 1px;
 }
 
-/* =========================================================
-   TABLET  (up to 1100px)
-   ========================================================= */
 @media (max-width: 1100px) {
   .container {
     padding: 0 32px;
@@ -935,7 +911,6 @@ button {
     right: 32px;
   }
 
-  /* 2 food cards visible */
   .food-card {
     flex-basis: calc((100% - 32px) / 2);
   }
@@ -969,11 +944,8 @@ button {
   }
 }
 
-/* =========================================================
-   SMALL TABLET  (up to 900px): stack the two-column parts
-   ========================================================= */
 @media (max-width: 900px) {
-  /* Header: logo + menu button, links drop down */
+  
   .menu-toggle {
     display: block;
     margin-left: auto;
@@ -1008,7 +980,6 @@ button {
     gap: 16px;
   }
 
-  /* Hero: text first, photo below */
   .hero {
     padding-bottom: 60px;
   }
@@ -1066,7 +1037,6 @@ button {
     font-size: 28px;
   }
 
-  /* About: photo above text */
   .about {
     padding: 60px 0;
   }
@@ -1096,7 +1066,6 @@ button {
     display: none;
   }
 
-  /* Popular: arrows move below the cards */
   .popular {
     padding: 60px 0;
   }
@@ -1124,7 +1093,6 @@ button {
     margin-top: 40px;
   }
 
-  /* Booking + testimonials */
   .booking {
     padding: 60px 0;
   }
@@ -1168,9 +1136,6 @@ button {
   }
 }
 
-/* =========================================================
-   MOBILE  (up to 700px)
-   ========================================================= */
 @media (max-width: 700px) {
   .container {
     padding: 0 30px;
@@ -1274,7 +1239,6 @@ button {
     font-size: 13px;
   }
 
- 
   .stat-card p {
     font-size: 10px;
     line-height: 14px;

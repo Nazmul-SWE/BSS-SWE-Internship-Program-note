@@ -9,7 +9,6 @@ body {
     color: #F5F5F5;
 }
 
-
 img {
     display: block;
     max-width: 100%;
@@ -19,12 +18,10 @@ a {
     text-decoration: none;
 }
 
-/* Remove default margins */
 h1, h2, h3, h4, p, ul, figure, blockquote {
     margin: 0;
     padding: 0;
 }
-
 
 button {
     font-family: inherit;
@@ -34,8 +31,7 @@ button {
     padding: 0;
 }
 
-
-/*  NAVIGATION BAR */
+/* Navigation */
 
 .nav {
     height: 106px;
@@ -75,13 +71,11 @@ button {
     color: #3e3e3e;
 }
 
-/* Mobile menu button */
 .nav__burger {
     display: none;
 }
 
-
-/*  HERO SECTION */
+/* Hero section */
 
 .hero {
     position: relative;
@@ -94,7 +88,6 @@ button {
     background-color: #1a1208;
 }
 
-/* Background image */
 .hero__bg {
     position: absolute;
     top: 0;
@@ -106,10 +99,6 @@ button {
     object-fit: cover;
 }
 
-
-
-
-/* hero arrows */
 .hero__arrow {
     position: absolute;
     top: 50%;
@@ -127,7 +116,6 @@ button {
     right: 24px;
 }
 
-/* arrow shape */
 .hero__arrow::before {
     content: "";
     position: absolute;
@@ -148,8 +136,6 @@ button {
     transform: rotate(135deg);
 }
 
-
-/* Hero text */
 .hero__content {
     position: absolute;
     left: 0;
@@ -179,7 +165,6 @@ button {
     margin-top: 4px;
 }
 
-/* Hero button */
 .btn-white {
     margin-top: 17px;
     width: 168px;
@@ -193,8 +178,7 @@ button {
    
 }
 
-
-/* ABOUT SECTION*/
+/* About section */
 
 .about {
     position: relative;
@@ -209,7 +193,6 @@ button {
     gap: 35px;
 }
 
-
 .about__img {
     width: 546px;
     height: 364px;
@@ -222,7 +205,6 @@ button {
     display: none;
 }
 
-/* About text */
 .about__text {
     flex: 1;
     min-width: 0;
@@ -246,7 +228,6 @@ button {
     max-width: 500px;
 }
 
-/* About button */
 .btn-blue {
     margin-top: 20px;
     width: 230px;
@@ -261,8 +242,7 @@ button {
     gap: 120px;
 }
 
-
-/*  DISCOUNT MESSAGE */
+/* Discount message */
 
 .toast {
     position: absolute;
@@ -281,7 +261,6 @@ button {
     color: #505050;
 }
 
-/* Blue line on the left */
 .toast::before {
     content: '';
 
@@ -295,7 +274,7 @@ button {
     background-color: #3f87f5;
 }
 
-/* PACKAGES */
+/* Packages */
 
 .packages {
     padding: 80px 20px;
@@ -308,9 +287,6 @@ button {
     font-weight: 700;
 }
 
-
-/* cards row */
-
 .plans {
     max-width: 1120px;
     margin: 70px auto 0;
@@ -319,9 +295,6 @@ button {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
-
-
-/* card */
 
 .plan {
     position: relative;
@@ -334,17 +307,11 @@ button {
     transition: 0.3s;
 }
 
-
-/* card hover */
-
 .plan:hover {
     background-color: #3f87f5;
     box-shadow: 0 20px 35px rgba(63, 135, 245, 0.3);
     transform: translateY(-10px);
 }
-
-
-/* Price */
 
 .plan__price {
     font-size: 34px;
@@ -354,9 +321,6 @@ button {
     transition: 0.3s;
 }
 
-
-/* title */
-
 .plan h3 {
     font-size: 22px;
     color: #231d4f;
@@ -364,9 +328,6 @@ button {
 
     transition: 0.3s;
 }
-
-
-/* Description */
 
 .plan__desc {
     font-size: 14px;
@@ -378,9 +339,6 @@ button {
 
     transition: 0.3s;
 }
-
-
-/* list */
 
 .plan ul {
     list-style: none;
@@ -398,9 +356,6 @@ button {
 
     transition: 0.3s;
 }
-
-
-/* tick icon */
 
 .plan li::before {
     content: "✓";
@@ -424,9 +379,6 @@ button {
     font-weight: bold;
 }
 
-
-/* button */
-
 .plan__btn {
     display: block;
 
@@ -448,8 +400,6 @@ button {
     transition: 0.3s;
 }
 
-
-/* hover colors */
 .plan:hover .plan__price,
 .plan:hover h3,
 .plan:hover .plan__desc,
@@ -472,9 +422,6 @@ button {
     color: white;
 }
 
-
-/* hot badge */
-
 .hot {
     position: absolute;
     top: -6px;
@@ -491,17 +438,14 @@ button {
     font-weight: 600;
 }
 
-
-
-/* ==============================
+/* 
    TESTIMONIAL SECTION
-============================== */
+*/
 
 .testi {
     margin-top: 138px;
 }
 
-/* Testimonial cards container */
 .testi__grid {
     width: 1160px;
     margin: 100px auto 0;
@@ -510,7 +454,6 @@ button {
     gap: 40px;
 }
 
-/* Individual card */
 .card {
     height: 323px;
     padding-top: 20px;
@@ -520,7 +463,6 @@ button {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Customer review */
 .card blockquote {
     font-size: 16px;
     font-weight: 400;
@@ -528,7 +470,6 @@ button {
     color: #6c6c6c;
 }
 
-/* Customer image */
 .card img {
     width: 100px;
     height: 100px;
@@ -541,7 +482,6 @@ button {
     display: block;
 }
 
-/* Customer name */
 .card b {
     display: block;
     margin-top: 16px;
@@ -552,7 +492,6 @@ button {
     color: #0c1920;
 }
 
-/* Customer designation */
 .card span {
     display: block;
     margin-top: 3px;
@@ -562,17 +501,15 @@ button {
     color: #747474;
 }
 
-
-/* ==============================
+/* 
    FAQ SECTION
-============================== */
-/* FAQ SECTION */
+ */
+
 .faq {
     margin-top: 100px;
     padding-bottom: 100px;
 }
 
-/* FAQ CONTAINER */
 .faq-container {
     width: 90%;
     max-width: 1122px;
@@ -582,12 +519,10 @@ button {
     gap: 25px;
 }
 
-/* FAQ LIST */
 .faq-list {
     width: 50%;
 }
 
-/* EACH QUESTION */
 .question {
     border: 1px solid #d5e5fb;
     border-radius: 5px;
@@ -595,7 +530,6 @@ button {
     background-color: white;
 }
 
-/* QUESTION TITLE */
 .question-title {
     width: 100%;
     padding: 20px;
@@ -613,7 +547,6 @@ button {
     color: #383838;
 }
 
-/* faq arrow */
 .arrow {
     flex: none;
     width: 9px;
@@ -624,14 +557,12 @@ button {
     transform: rotate(45deg);
 }
 
-/* faq arrow when open */
 .question.open .arrow {
     margin-bottom: 0;
     margin-top: 6px;
     transform: rotate(225deg);
 }
 
-/* ANSWER */
 .answer {
     display: none;
     padding: 0 20px 15px;
@@ -643,12 +574,10 @@ button {
     color: #7e848c;
 }
 
-/* SHOW FIRST ANSWER */
 .question.open .answer {
     display: block;
 }
 
-/* FAQ IMAGE */
 .faq-image {
     width: 50%;
 }
@@ -661,11 +590,9 @@ button {
     margin-top: 40px;
 }
 
-
-
-/* ==============================
+/* 
    FOOTER
-============================== */
+ */
 
 .footer {
     height: 280px;
@@ -674,7 +601,6 @@ button {
     font-family: 'Inter', sans-serif;
 }
 
-/* Footer content */
 .footer__inner {
     height: 100%;
     padding: 0 190px 0 165px;
@@ -683,13 +609,11 @@ button {
     justify-content: space-between;
 }
 
-/* Copyright text */
 .footer__copy {
     font-size: 16px;
     line-height: 20px;
 }
 
-/* App download section */
 .footer__app {
     align-self: flex-start;
     padding-top: 59px;
@@ -715,12 +639,10 @@ button {
     height: 40px;
 }
 
-
-
-/* MOBILE RESPONSIVE */
+/* Mobile styles */
 @media (max-width: 767.98px) {
 
-    /* NAVIGATION */
+    /* Navigation */
     .nav {
         height: 80px;
     }
@@ -774,8 +696,7 @@ button {
         padding: 10px 0;
     }
 
-
-    /* HERO */
+    /* Hero */
     .hero {
         height: 586px;
     }
@@ -799,8 +720,7 @@ button {
         margin-top: 15px;
     }
 
-
-    /* ABOUT */
+    /* About */
     .about {
         padding: 65px 0 50px;
     }
@@ -839,15 +759,12 @@ button {
         max-width: calc(100% - 72px);
     }
 
-
-    /* SECTION TITLES */
     .title {
         font-size: 20px;
         line-height: 30px;
     }
 
-
-    /* PACKAGES */
+    /* Packages */
     .packages {
         padding: 60px 18px;
     }
@@ -897,8 +814,7 @@ button {
         color: #3f87f5;
     }
 
-
-    /* TESTIMONIALS */
+    /* Testimonials */
     .testi {
         margin-top: 60px;
     }
@@ -913,7 +829,6 @@ button {
     .card {
         padding-top: 23px;
     }
-
 
     /* FAQ */
     .faq {
@@ -941,8 +856,7 @@ button {
         margin-top: 20px;
     }
 
-
-    /* FOOTER */
+    /* Footer */
     .footer {
         height: auto;
     }

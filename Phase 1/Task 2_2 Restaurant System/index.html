@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant | Taste the Authentic Saudi Cuisine</title>
 
-  <!-- Google Fonts: Bebas Neue (headings), Roboto + Inter + Open Sans + Poppins (text) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,20 +19,15 @@
 
 <body>
 
-  <!-- =========================================================
-       1. HERO (header + main banner)
-       ========================================================= -->
   <section class="hero" id="home">
     <div class="container">
 
-      <!-- Header / navigation -->
       <header class="header">
         <a href="#home" class="logo">
           <img src="images/logo-icon.svg" alt="" class="logo-icon">
           <span class="logo-text"><b>Restau</b>rant</span>
         </a>
 
-        <!-- Menu button (only visible on mobile) -->
         <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
           <img src="images/icon-menu.svg" alt="">
         </button>
@@ -51,7 +45,6 @@
         </nav>
       </header>
 
-      <!-- Hero content -->
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="hero-title">Taste the authentic<br>Saudi cuisine</h1>
@@ -71,15 +64,11 @@
     </div>
   </section>
 
-
-  <!-- =========================================================
-       2. ABOUT
-       ========================================================= -->
   <section class="about" id="about">
     <div class="container">
 
       <div class="about-grid">
-        <!-- Left: photo + "50+" card -->
+
         <div class="about-image">
           <img src="images/about-burger.jpg" alt="Burger with fries and a cold drink" class="about-photo">
           <div class="stat-card">
@@ -91,7 +80,6 @@
           </div>
         </div>
 
-        <!-- Right: tabs + text -->
         <div class="about-content">
           <div class="tabs">
             <button class="tab active" data-tab="tab-about">About</button>
@@ -128,7 +116,6 @@
         </div>
       </div>
 
-      <!-- Three feature boxes -->
       <div class="features">
         <div class="feature">
           <span class="feature-icon"><img src="images/icon-box.svg" alt=""></span>
@@ -155,14 +142,9 @@
 
     </div>
 
-    <!-- Decoration: salad bowl on the right edge -->
     <img src="images/salad-bowl.png" alt="" class="decor decor-bowl">
   </section>
 
-
-  <!-- =========================================================
-       3. POPULAR FOOD ITEMS (slider)
-       ========================================================= -->
   <section class="popular" id="popular">
     <img src="images/pepper-rings.png" alt="" class="decor decor-rings">
 
@@ -203,7 +185,6 @@
         </article>
       </div>
 
-      <!-- Slider arrows -->
       <div class="arrows">
         <button class="arrow-btn" data-target="food-track" data-dir="-1" aria-label="Previous"><img
             src="images/chevron-left.svg" alt=""></button>
@@ -213,10 +194,6 @@
     </div>
   </section>
 
-
-  <!-- =========================================================
-       4. BOOK YOUR TABLE
-       ========================================================= -->
   <section class="booking" id="booking">
     <div class="container">
       <p class="label">Book Now</p>
@@ -245,10 +222,6 @@
     </div>
   </section>
 
-
-  <!-- =========================================================
-       5. TESTIMONIALS
-       ========================================================= -->
   <section class="testimonials" id="testimonials">
     <img src="images/tomato-slice.png" alt="" class="decor decor-tomato">
     <img src="images/herb.png" alt="" class="decor decor-herb">
@@ -259,7 +232,7 @@
 
       <div class="slider-track" id="testi-track">
         <div class="testimonial">
-          <!-- Yellow quote box -->
+
           <div class="quote-box">
             <p class="quote-text">You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked
               perfectly, juicy &amp; soft (usually mandi chicken is a bit dry). I would defiantly recommend it.</p>
@@ -274,7 +247,6 @@
             <img src="images/ornament.svg" alt="" class="ornament">
           </div>
 
-          <!-- Video image -->
           <div class="quote-video">
             <img src="images/testimonial-food.jpg" alt="Chicken mandi served on rice">
             <button class="play-btn" id="play-btn" aria-label="Play video"><span></span></button>
@@ -286,10 +258,6 @@
     </div>
   </section>
 
-
-  <!-- =========================================================
-       6. FOOTER
-       ========================================================= -->
   <footer class="footer" id="footer">
     <div class="footer-inner">
       <h2 class="footer-title">We ready to have you the best dining experiences</h2>
@@ -317,7 +285,6 @@
         </div>
       </div>
 
-      <!-- Social icons -->
       <div class="social">
         <a href="#" aria-label="Facebook"><img src="images/icon-facebook.svg" alt=""></a>
         <a href="#" aria-label="X (Twitter)"><img src="images/icon-x.svg" alt=""></a>
@@ -329,12 +296,8 @@
     </div>
   </footer>
 
-
-  <!-- =========================================================
-       SMALL SCRIPT: menu, tabs, sliders, date field, form
-       ========================================================= -->
   <script>
-    // 1) Mobile menu: show / hide the navigation
+    // Toggle the mobile navigation.
     var menuButton = document.getElementById('menu-toggle');
     var nav = document.getElementById('nav');
 
@@ -343,7 +306,7 @@
       menuButton.setAttribute('aria-expanded', isOpen);
     });
 
-    // close the menu after clicking a link
+    // Close the menu after a navigation link is selected.
     nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         nav.classList.remove('open');
@@ -351,7 +314,7 @@
       });
     });
 
-    // 2) About tabs: switch the text when a tab is clicked
+    // Switch the visible About tab.
     var tabs = document.querySelectorAll('.tab');
     var panels = document.querySelectorAll('.tab-panel');
 
@@ -364,25 +327,25 @@
       });
     });
 
-    // 3) Slider arrows: scroll the track left or right
+    // Scroll the selected slider.
     document.querySelectorAll('.arrow-btn').forEach(function (button) {
       button.addEventListener('click', function () {
         var track = document.getElementById(button.dataset.target);
         var direction = Number(button.dataset.dir);
         var firstItem = track.firstElementChild;
-        var step = firstItem.offsetWidth + 32; // item width + gap
+        var step = firstItem.offsetWidth + 32; // Card width plus the gap.
         track.scrollBy({ left: direction * step, behavior: 'smooth' });
       });
     });
 
-    // 4) Reservation date field: show a calendar when it is clicked
+    // Show the date picker when the field is focused.
     var dateField = document.getElementById('date-field');
     dateField.addEventListener('focus', function () { dateField.type = 'date'; });
     dateField.addEventListener('blur', function () {
       if (dateField.value === '') { dateField.type = 'text'; }
     });
 
-    // 5) Booking form: show a thank-you message
+    // Show a confirmation after the form is submitted.
     document.getElementById('booking-form').addEventListener('submit', function (event) {
       event.preventDefault();
       alert('Thank you! Your table request has been received.');
@@ -390,7 +353,6 @@
       dateField.type = 'text';
     });
 
-    // 6) Play button
     document.getElementById('play-btn').addEventListener('click', function () {
       alert('Video coming soon!');
     });
