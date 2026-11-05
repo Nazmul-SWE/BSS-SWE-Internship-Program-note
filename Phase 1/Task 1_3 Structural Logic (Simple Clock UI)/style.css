@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     height: 100vh;
@@ -15,7 +14,6 @@ body {
     border-radius: 50%;
     position: relative;
 }
-
 
 .hand {
     position: absolute;
@@ -42,6 +40,14 @@ body {
     animation: redRotate 6s linear infinite;
 }
 
+/* Yellow hour hand moves randomly */
+.yellow {
+    width: 7px;
+    height: 110px;
+    background-color: yellow;
+    animation: yellowRotate 3600s linear infinite;
+}
+
 /* Blue hand rotation */
 @keyframes blueRotate {
     from {
@@ -54,6 +60,14 @@ body {
 
 /* Red hand rotation */
 @keyframes redRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes yellowRotate {
     from {
         transform: rotate(0deg);
     }
