@@ -1,281 +1,363 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Abacus Convention Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant | Taste the Authentic Saudi Cuisine</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <header class="nav">
-    <div class="nav__inner">
-      <a href="#" class="nav__logo">Abacus Convention Center</a>
-      <nav class="nav__links" id="navLinks">
-        <a href="#">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#faq">Contact</a>
-        <a href="#footer">Subscribe</a>
-      </nav>
-      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+  <section class="hero" id="home">
+    <div class="container">
 
-  <!-- Hero Section -->
-  <section class="hero">
-
-    <img class="hero__bg" src="img/hero.jpg" alt="">
-
-    <button class="hero__arrow hero__arrow--left" aria-label="Previous slide"></button>
-    <button class="hero__arrow hero__arrow--right" aria-label="Next slide"></button>
-
-    <div class="hero__content">
-      <h1>The perfect venue for your next event</h1>
-
-      <p>
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-        Velit officia consequat duis enim velit.
-      </p>
-
-      <a href="#packages" class="btn-white">Book Now</a>
-    </div>
-
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-
-    <div class="toast">
-      <span>🎁 20% off on next booking</span>
-      <button>×</button>
-    </div>
-
-    <div class="about__inner">
-
-      <img src="img/about.jpg" alt="Guests celebrating together">
-
-      <div class="about__text">
-        <h2>Every moment is Precious</h2>
-
-        <p>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-          Velit officia consequat duis enim velit mollit.
-          Exercitation veniam consequat sunt nostrud amet.
-        </p>
-
-        <a href="#" class="btn-blue">
-          Explore our album →
+      <header class="header">
+        <a href="#home" class="logo">
+          <img src="images/logo-icon.svg" alt="" class="logo-icon">
+          <span class="logo-text"><b>Restau</b>rant</span>
         </a>
-      </div>
 
-    </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <img src="images/icon-menu.svg" alt="">
+        </button>
 
-  </section>
+        <nav class="nav" id="nav">
+          <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#popular">Portfolio</a></li>
+            <li><a href="#testimonials">Clients</a></li>
+            <li><a href="#footer">Blog</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+          <a href="#booking" class="btn">Book a table</a>
+        </nav>
+      </header>
 
-  <!-- Packages Section -->
-  <section class="packages" id="packages">
-
-    <h2 class="title">Our Package</h2>
-
-    <div class="plans">
-
-      <article class="plan">
-        <div class="plan__price">$300</div>
-        <h3>Business Fair</h3>
-        <p class="plan__desc">For most business events like book fairs and craft fairs.</p>
-        <ul>
-          <li>Limited space access</li>
-          <li>Security facility</li>
-          <li>Event support</li>
-          <li>Decoration design</li>
-          <li>Per day bill</li>
-        </ul>
-        <a href="#" class="plan__btn">Choose Plan</a>
-      </article>
-
-      <article class="plan">
-        <div class="plan__price">$500</div>
-        <h3>Wedding Basic</h3>
-        <p class="plan__desc">For weddings with basic plans and limited items.</p>
-        <ul>
-          <li>Full space access</li>
-          <li>Food arrangement</li>
-          <li>Management support</li>
-          <li>Decoration design</li>
-          <li>Billed as shift</li>
-        </ul>
-        <a href="#" class="plan__btn">Choose Plan</a>
-      </article>
-
-      <article class="plan">
-        <span class="hot">Hot</span>
-        <div class="plan__price">$800</div>
-        <h3>Wedding Plus</h3>
-        <p class="plan__desc">For most weddings with premium plans.</p>
-        <ul>
-          <li>Full space access</li>
-          <li>Dedicated team</li>
-          <li>Buffet food</li>
-          <li>Premium decoration</li>
-          <li>Pay as plan</li>
-        </ul>
-        <a href="#" class="plan__btn">Choose Plan</a>
-      </article>
-
-      <article class="plan">
-        <div class="plan__price">$1200</div>
-        <h3>Corporate Event</h3>
-        <p class="plan__desc">For corporate business events and meetings.</p>
-        <ul>
-          <li>Full space access</li>
-          <li>Dedicated team</li>
-          <li>Buffet food</li>
-          <li>Premium decoration</li>
-          <li>Pay as plan</li>
-        </ul>
-        <a href="#" class="plan__btn">Choose Plan</a>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testi">
-    <h2 class="title">Happy Clients says</h2>
-    <div class="testi__grid">
-      <figure class="card">
-        <blockquote>Slate helps you see how<br>many more days you need<br>to work to reach your financial<br>goal for the month and year.</blockquote>
-        <img src="img/a1.jpg" alt="" width="100" height="100">
-        <figcaption><b>Regina Miles</b><span>Banker</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <blockquote>Slate helps you see how<br>many more days you need<br>to work to reach your financial<br>goal for the month and year.</blockquote>
-        <img src="img/a2.jpg" alt="" width="100" height="100">
-        <figcaption><b>Jone Drake</b><span>Banker</span></figcaption>
-      </figure>
-
-      <figure class="card">
-        <blockquote>Slate helps you see how<br>many more days you need<br>to work to reach your financial<br>goal for the month and year.</blockquote>
-        <img src="img/a3.jpg" alt="" width="100" height="100">
-        <figcaption><b>Cret Yater</b><span>Banker</span></figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq">
-
-    <h2 class="title">Frequently Asked Questions</h2>
-
-    <div class="faq-container">
-
-      <div class="faq-list">
-
-        <div class="question open">
-          <button class="question-title" onclick="toggleAnswer(this)">
-            <span>What’s the difference between event design and event planning?</span>
-            <span class="arrow"></span>
-          </button>
-
-          <div class="answer">
-            <p>
-              Event design and event planning work hand in hand to deliver a
-              successful event. Events by Knight offer tailor made events. This
-              means we incorporate both event design and event planning to
-              create that perfect event.
-            </p>
-          </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Taste the authentic<br>Saudi cuisine</h1>
+          <p class="hero-desc">Among the best Saudi chefs in the world, serving you something beyond flavor.</p>
+          <a href="#popular" class="btn">Explore Menu</a>
         </div>
 
-        <div class="question">
-          <button class="question-title" onclick="toggleAnswer(this)">
-            <span>How early do we need to start planning an event?</span>
-            <span class="arrow"></span>
-          </button>
-
-          <div class="answer">
-            <p>
-              We recommend starting at least three to six months ahead
-              so we can secure your preferred date, vendors and décor.
-            </p>
+        <div class="hero-image">
+          <img src="images/hero-food.jpg" alt="Grilled ribs served with fries and sauce" class="hero-photo">
+          <img src="images/star.svg" alt="" class="hero-star">
+          <div class="offer-badge">
+            <span>Today<br>Offer</span>
           </div>
         </div>
-
-        <div class="question">
-          <button class="question-title" onclick="toggleAnswer(this)">
-            <span>What is your refund and cancellation policy?</span>
-            <span class="arrow"></span>
-          </button>
-
-          <div class="answer">
-            <p>
-              We recommend starting at least three to six months ahead
-              so we can secure your preferred date, vendors and décor.
-            </p>
-          </div>
-        </div>
-
-        <div class="question">
-          <button class="question-title" onclick="toggleAnswer(this)">
-            <span>How do you keep budgets on track?</span>
-            <span class="arrow"></span>
-          </button>
-
-          <div class="answer">
-            <p>
-              We recommend starting at least three to six months ahead
-              so we can secure your preferred date, vendors and décor.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="faq-image">
-        <img src="img/faq.jpg" alt="Crowd at an event">
       </div>
 
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-image">
+          <img src="images/about-burger.jpg" alt="Burger with fries and a cold drink" class="about-photo">
+          <div class="stat-card">
+            <div class="stat-ring">
+              <img src="images/ring-50.svg" alt="">
+              <span>50+</span>
+            </div>
+            <p>Market<br>Experiences</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="tabs">
+            <button class="tab active" data-tab="tab-about">About</button>
+            <button class="tab" data-tab="tab-experience">Experience</button>
+            <button class="tab" data-tab="tab-contact">Contact</button>
+          </div>
+
+          <h2 class="section-title">Exceptional culinary experience and delicious food</h2>
+
+          <div class="tab-panel active" id="tab-about">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare non sed est cursus. Vel hac convallis
+              ipsum, facilisi odio pellentesque bibendum viverra tempus. Lorem ipsum dolor sit amet consectetur
+              adipiscing elit do eiusmod tempor incididunt ut labore et dolore magna minim veniam nostrud exercitation.
+            </p>
+          </div>
+          <div class="tab-panel" id="tab-experience">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.</p>
+          </div>
+          <div class="tab-panel" id="tab-contact">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident.</p>
+          </div>
+
+          <div class="about-actions">
+            <a href="#booking" class="btn">About More</a>
+            <a href="tel:+883426739485" class="phone-link">
+              <img src="images/icon-phone-red.svg" alt="">
+              <span>+88 3426 739 485</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <span class="feature-icon"><img src="images/icon-box.svg" alt=""></span>
+          <div>
+            <h3>Fast delivery</h3>
+            <p>Within 30 minutes</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon"><img src="images/icon-award.svg" alt=""></span>
+          <div>
+            <h3>Absolute dining</h3>
+            <p>Best buffet restaurant</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="feature-icon"><img src="images/icon-bag.svg" alt=""></span>
+          <div>
+            <h3>Pickup delivery</h3>
+            <p>Grab your food order</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <img src="images/salad-bowl.png" alt="" class="decor decor-bowl">
+  </section>
+
+  <section class="popular" id="popular">
+    <img src="images/pepper-rings.png" alt="" class="decor decor-rings">
+
+    <div class="container popular-container">
+      <p class="label">Crispy, Every Bite Taste</p>
+      <h2 class="section-title">Popular food items</h2>
+
+      <div class="slider-track" id="food-track">
+        <article class="food-card">
+          <img src="images/burger.jpg" alt="Vegetables burger">
+          <span class="card-line"></span>
+          <h3>Vegetables burger</h3>
+          <p>Barbecue Italian cuisine pizza</p>
+        </article>
+        <article class="food-card">
+          <img src="images/pizza.png" alt="Special pizza">
+          <span class="card-line"></span>
+          <h3>Spacial Pizza</h3>
+          <p>Barbecue Italian cuisine pizza</p>
+        </article>
+        <article class="food-card">
+          <img src="images/fries.jpg" alt="Special French fries">
+          <span class="card-line"></span>
+          <h3>Spacial French fries</h3>
+          <p>Barbecue Italian cuisine</p>
+        </article>
+        <article class="food-card">
+          <img src="images/chicken.jpg" alt="Cuisine chicken">
+          <span class="card-line"></span>
+          <h3>Cuisine Chicken</h3>
+          <p>Japanese Cuisine Chicken</p>
+        </article>
+        <article class="food-card">
+          <img src="images/chicken.jpg" alt="Cuisine chicken">
+          <span class="card-line"></span>
+          <h3>Cuisine Chicken</h3>
+          <p>Japanese Cuisine Chicken</p>
+        </article>
+      </div>
+
+      <div class="arrows">
+        <button class="arrow-btn" data-target="food-track" data-dir="-1" aria-label="Previous"><img
+            src="images/chevron-left.svg" alt=""></button>
+        <button class="arrow-btn" data-target="food-track" data-dir="1" aria-label="Next"><img
+            src="images/chevron-right.svg" alt=""></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="container">
+      <p class="label">Book Now</p>
+      <h2 class="section-title">Book your table</h2>
+      <p class="booking-desc">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare
+        non id blandit netus.</p>
+
+      <form class="booking-form" id="booking-form">
+        <input type="text" class="field" placeholder="Your Name *" required>
+        <input type="email" class="field" placeholder="Your Email">
+        <input type="text" class="field field-date" id="date-field" placeholder="Reservation Date">
+        <select class="field field-select" required>
+          <option value="" selected disabled>Total People</option>
+          <option>1 Person</option>
+          <option>2 People</option>
+          <option>3 People</option>
+          <option>4 People</option>
+          <option>5 People</option>
+          <option>6 People</option>
+          <option>7 People</option>
+          <option>8+ People</option>
+        </select>
+        <textarea class="field field-message" placeholder="Message"></textarea>
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <img src="images/tomato-slice.png" alt="" class="decor decor-tomato">
+    <img src="images/herb.png" alt="" class="decor decor-herb">
+
+    <div class="container testimonials-container">
+      <p class="label">Crispy, Every Bite Taste</p>
+      <h2 class="section-title">What some of my customers say</h2>
+
+      <div class="slider-track" id="testi-track">
+        <div class="testimonial">
+
+          <div class="quote-box">
+            <p class="quote-text">You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked
+              perfectly, juicy &amp; soft (usually mandi chicken is a bit dry). I would defiantly recommend it.</p>
+
+            <div class="author">
+              <div class="author-info">
+                <h4>Khalid Al Dawsry</h4>
+                <p>Jeddah, Saudi</p>
+              </div>
+              <img src="images/avatar.jpg" alt="Khalid Al Dawsry" class="avatar">
+            </div>
+            <img src="images/ornament.svg" alt="" class="ornament">
+          </div>
+
+          <div class="quote-video">
+            <img src="images/testimonial-food.jpg" alt="Chicken mandi served on rice">
+            <button class="play-btn" id="play-btn" aria-label="Play video"><span></span></button>
+          </div>
+        </div>
+      </div>
+
+     
+    </div>
+  </section>
+
   <footer class="footer" id="footer">
-    <div class="footer__inner">
-      <p class="footer__copy">© 2020 bike. All rights reserved</p>
-      <div class="footer__app">
-        <h4>Get the App</h4>
-        <a href="#"><img src="img/appstore.png" alt="Download on the App Store" width="135" height="40"></a>
-        <a href="#"><img src="img/gplay.png" alt="Get it on Google Play" width="135" height="40"></a>
+    <div class="footer-inner">
+      <h2 class="footer-title">We ready to have you the best dining experiences</h2>
+
+      <div class="footer-info">
+        <div class="info-item">
+          <img src="images/icon-clock.svg" alt="">
+          <h3>Opening hours</h3>
+          <p>Monday - Sunday<br>9:00 AM to 11:30 PM</p>
+        </div>
+        <div class="info-item">
+          <img src="images/icon-phone-yellow.svg" alt="">
+          <h3>Let's talk</h3>
+          <p>Phone: 1-800-222-4545<br>Fax: 1-800-222-4545</p>
+        </div>
+        <div class="info-item">
+          <img src="images/icon-mail.svg" alt="">
+          <h3>Book a table</h3>
+          <p>Email: demo@website.com<br>Support: support@website.com</p>
+        </div>
+        <div class="info-item">
+          <img src="images/icon-pin.svg" alt="">
+          <h3>Our Address</h3>
+          <p>123 Stree New York City , United<br>States Of America.</p>
+        </div>
       </div>
+
+      <div class="social">
+        <a href="#" aria-label="Facebook"><img src="images/icon-facebook.svg" alt=""></a>
+        <a href="#" aria-label="X (Twitter)"><img src="images/icon-x.svg" alt=""></a>
+        <a href="#" aria-label="Instagram"><img src="images/icon-instagram.svg" alt=""></a>
+        <a href="#" aria-label="LinkedIn"><img src="images/icon-linkedin.svg" alt=""></a>
+      </div>
+
+      <p class="copyright">&copy; 2023 All Rights Reserved</p>
     </div>
   </footer>
 
   <script>
-    function toggleAnswer(button) {
-      let question = button.parentElement;
-      question.classList.toggle("open");
-    }
+    // Toggle the mobile navigation.
+    var menuButton = document.getElementById('menu-toggle');
+    var nav = document.getElementById('nav');
 
-    const burger = document.getElementById("burger");
-    const navLinks = document.getElementById("navLinks");
+    menuButton.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', isOpen);
+    });
 
-    burger.addEventListener("click", function () {
-      const open = navLinks.classList.toggle("show");
-      burger.setAttribute("aria-expanded", open);
+    // Close the menu after a navigation link is selected.
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // Switch the visible About tab.
+    var tabs = document.querySelectorAll('.tab');
+    var panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.classList.remove('active'); });
+        panels.forEach(function (p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Scroll the selected slider.
+    document.querySelectorAll('.arrow-btn').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var track = document.getElementById(button.dataset.target);
+        var direction = Number(button.dataset.dir);
+        var firstItem = track.firstElementChild;
+        var step = firstItem.offsetWidth + 32; // Card width plus the gap.
+        track.scrollBy({ left: direction * step, behavior: 'smooth' });
+      });
+    });
+
+    // Show the date picker when the field is focused.
+    var dateField = document.getElementById('date-field');
+    dateField.addEventListener('focus', function () { dateField.type = 'date'; });
+    dateField.addEventListener('blur', function () {
+      if (dateField.value === '') { dateField.type = 'text'; }
+    });
+
+    // Show a confirmation after the form is submitted.
+    document.getElementById('booking-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Thank you! Your table request has been received.');
+      event.target.reset();
+      dateField.type = 'text';
+    });
+
+    document.getElementById('play-btn').addEventListener('click', function () {
+      alert('Video coming soon!');
     });
   </script>
 
 </body>
+
 </html>
