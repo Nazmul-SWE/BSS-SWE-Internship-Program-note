@@ -129,8 +129,7 @@ button {
 .slider-track {
   display: flex;
   gap: 32px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow-x: auto; 
   scrollbar-width: none;
 }
 
