@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container py-4">
+
+        <!-- theme buttons -->
+        <div class="text-end">
+            <div class="btn-group btn-group-sm">
+                <button class="btn btn-secondary" onclick="setTheme('dark')">Dark</button>
+                <button class="btn btn-light" onclick="setTheme('light')">Light</button>
+            </div>
+        </div>
+
+        <h1 class="text-secondary my-4">Users</h1>
+
+        <!-- search and tabs -->
+        <div class="row mb-4">
+            <div class="col-md-4 mb-3">
+                <input type="text" class="form-control form-control-lg" placeholder="Search Users">
+            </div>
+            <div class="col-md-8">
+                <ul class="nav nav-pills justify-content-md-end">
+                    <li class="nav-item"><a class="nav-link" href="#">Reputation</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">New Users</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Editors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Moderators</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- users -->
+        <div class="row">
+
+            <div class="col-lg-4 mb-3">
+                <div class="card p-3 flex-row">
+                    <img src="img/user1.jpg" class="rounded-circle me-3" width="80" height="80" alt="John Doe">
+                    <div>
+                        <h5>John Doe</h5>
+                        <p class="text-secondary mb-2">Troy, MI</p>
+                        <span class="badge bg-primary">Nature</span>
+                        <span class="badge bg-primary">Travel</span>
+                        <span class="badge bg-primary">Sports</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-3">
+                <div class="card p-3 flex-row">
+                    <img src="img/user2.jpg" class="rounded-circle me-3" width="80" height="80" alt="Lelah Nichols">
+                    <div>
+                        <h5>Lelah Nichols</h5>
+                        <p class="text-secondary mb-2">Fort Worth, TX</p>
+                        <span class="badge bg-primary">Fashion</span>
+                        <span class="badge bg-primary">STEM</span>
+                        <span class="badge bg-primary">Architecture</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-3">
+                <div class="card p-3 flex-row">
+                    <img src="img/user2.jpg" class="rounded-circle me-3" width="80" height="80" alt="Annie Rice">
+                    <div>
+                        <h5>Annie Rice</h5>
+                        <p class="text-secondary mb-2">Troy, MI</p>
+                        <span class="badge bg-primary">Electronics</span>
+                        <span class="badge bg-primary">Tech</span>
+                        <span class="badge bg-primary">Music</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-3">
+                <div class="card p-3 flex-row">
+                    <img src="img/user1.jpg" class="rounded-circle me-3" width="80" height="80" alt="Thomas Sinew">
+                    <div>
+                        <h5>Thomas Sinew</h5>
+                        <p class="text-secondary mb-2">Lynn, MA</p>
+                        <span class="badge bg-primary">Vintage</span>
+                        <span class="badge bg-primary">Clothes</span>
+                        <span class="badge bg-primary">Sports</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-3">
+                <div class="card p-3 flex-row">
+                    <img src="img/user2.jpg" class="rounded-circle me-3" width="80" height="80" alt="Brianna Haylee">
+                    <div>
+                        <h5>Brianna Haylee</h5>
+                        <p class="text-secondary mb-2">Boston, MA</p>
+                        <span class="badge bg-primary">Software</span>
+                        <span class="badge bg-primary">Design</span>
+                        <span class="badge bg-primary">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-3">
+                <div class="card p-3 flex-row">
+                    <img src="img/user1.jpg" class="rounded-circle me-3" width="80" height="80" alt="James Hall">
+                    <div>
+                        <h5>James Hall</h5>
+                        <p class="text-secondary mb-2">Austin, TX</p>
+                        <span class="badge bg-primary">Dance</span>
+                        <span class="badge bg-primary">Fashion</span>
+                        <span class="badge bg-primary">Music</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- pagination -->
+        <ul class="pagination pagination-sm">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function setTheme(theme) {
+            document.documentElement.setAttribute("data-bs-theme", theme);
+        }
+    </script>
+</body>
+</html>
